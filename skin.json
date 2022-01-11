@@ -1,0 +1,42 @@
+{
+	"name": "TuleapSkin",
+	"version": "",
+	"license-name": "GPL-3.0-only",
+	"author": [
+		"[http://www.hallowelt.com Hallo Welt! GmbH]"
+	],
+	"url": "http://www.hallowelt.com",
+	"descriptionmsg": "tuleapskin-desc",
+	"requires": {
+		"MediaWiki": ">= 1.35.0"
+	},
+	"MessagesDirs": {
+		"TuleapSkin": "i18n"
+	},
+	"AutoloadNamespaces": {
+		"TuleapSkin\\": "src/",
+		"TuleapSkin\\Tests\\": "tests/phpunit"
+	},
+	"ResourceModules": {
+		"ext.tuleapSkin": {
+			"scripts": [
+				"ext.tuleapSkin.js"
+			],
+			"styles": [
+				"ext.tuleapSkin.less"
+			]
+		},
+		"ext.tuleapSkin.styles": {
+			"styles": [
+				"ext.tuleapSkin.static.less"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "TuleapSkin/resources"
+	},
+	"Hooks": {
+	},
+	"manifest_version": 2
+}

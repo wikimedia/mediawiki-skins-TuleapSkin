@@ -1,0 +1,10 @@
+{
+	"name": "mediawiki/tuleap-skin",
+	"type": "mediawiki-skin",
+	"extra": {
+		"installer-name": "TuleapSkin"
+	},
+	"require": {
+		"composer/installers": "~1.0"
+	}
+}
