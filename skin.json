@@ -7,8 +7,15 @@
 	],
 	"url": "http://www.hallowelt.com",
 	"descriptionmsg": "tuleapskin-desc",
+	"type": "skin",
 	"requires": {
 		"MediaWiki": ">= 1.35.0"
+	},
+	"callback": "mwsInitComponents",
+	"ValidSkinNames": {
+		"tuleap": {
+			"class":"TuleapSkin\\SkinTuleapSkin"
+		}
 	},
 	"MessagesDirs": {
 		"TuleapSkin": "i18n"
@@ -18,25 +25,36 @@
 		"TuleapSkin\\Tests\\": "tests/phpunit"
 	},
 	"ResourceModules": {
-		"ext.tuleapSkin": {
+		"skins.tuleap": {
 			"scripts": [
 				"ext.tuleapSkin.js"
 			],
-			"styles": [
-				"ext.tuleapSkin.less"
+			"dependencies": [
+				"skins.tuleap-sidebar"
 			]
 		},
-		"ext.tuleapSkin.styles": {
+		"skins.tuleap.styles": {
 			"styles": [
-				"ext.tuleapSkin.static.less"
+				"stylesheets/main.css",
+				"stylesheets/tuleap-vars.css",
+				"stylesheets/tuleap-theme.css",
+				"stylesheets/oo-ui.css",
+				"stylesheets/toc.css"
+			]
+		},
+		"skins.tuleap-sidebar": {
+			"class": "MWStake\\MediaWiki\\Component\\ThirdPartyResources\\ResourceLoader\\DistFiles",
+			"packageFiles": [
+				"lib/project-sidebar.umd.js"
 			]
 		}
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "resources",
-		"remoteExtPath": "TuleapSkin/resources"
+		"remoteSkinPath": "TuleapSkin/resources"
 	},
 	"Hooks": {
 	},
+	"load_composer_autoloader": true,
 	"manifest_version": 2
 }

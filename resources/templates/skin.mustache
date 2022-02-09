@@ -1,0 +1,81 @@
+
+{{{html-headelement}}}
+{{html-site-notice}}
+<div class="row content-container">
+
+<tuleap-project-sidebar config="{&quot;internationalization&quot;:{&quot;tools&quot;:&quot;Tools&quot;,&quot;homepage&quot;:&quot;Homepage&quot;,&quot;project_administration&quot;:&quot;Project administration&quot;,&quot;project_announcement&quot;:&quot;Project announcement&quot;,&quot;show_project_announcement&quot;:&quot;Show project announcement&quot;,&quot;close_sidebar&quot;:&quot;Close sidebar&quot;,&quot;open_sidebar&quot;:&quot;Open sidebar&quot;},&quot;project&quot;:{&quot;icon&quot;:&quot;🌷&quot;,&quot;name&quot;:&quot;project1&quot;,&quot;href&quot;:&quot;/projects/project1&quot;,&quot;administration_href&quot;:&quot;https://myinstance.example.com/project/admin/?group_id=999&quot;,&quot;privacy&quot;:{&quot;are_restricted_users_allowed&quot;:true,&quot;project_is_public&quot;:true,&quot;project_is_public_incl_restricted&quot;:false,&quot;project_is_private&quot;:false,&quot;project_is_private_incl_restricted&quot;:false,&quot;explanation_text&quot;:&quot;Project privacy set to public. By default, its content is available to all authenticated, but not restricted, users. Please note that more restrictive permissions might exist on some items.&quot;,&quot;privacy_title&quot;:&quot;Public&quot;},&quot;has_project_announcement&quot;:true,&quot;flags&quot;:[{&quot;label&quot;:&quot;Label A&quot;,&quot;description&quot;:&quot;Some label description A&quot;},{&quot;label&quot;:&quot;Label B&quot;,&quot;description&quot;:&quot;Some label description B&quot;}],&quot;linked_projects&quot;:{&quot;label&quot;:&quot;2 aggregated projects&quot;,&quot;is_in_children_projects_context&quot;:true,&quot;projects&quot;:[{&quot;icon&quot;:&quot;&quot;,&quot;name&quot;:&quot;Team A&quot;,&quot;href&quot;:&quot;https://myinstance.example.com/projects/teama&quot;},{&quot;icon&quot;:&quot;🏡&quot;,&quot;name&quot;:&quot;Team B&quot;,&quot;href&quot;:&quot;https://myinstance.example.com/projects/teamb&quot;}]}},&quot;user&quot;:{&quot;is_project_administrator&quot;:true,&quot;is_logged_in&quot;:true},&quot;instance_information&quot;:{&quot;version&quot;:{&quot;flavor_name&quot;:&quot;Tuleap Community Edition&quot;,&quot;version_identifier&quot;:&quot;Dev Build 13.2.99.999&quot;,&quot;full_descriptive_version&quot;:&quot;Tuleap Community Edition — Dev Build 13.2.99.999&quot;},&quot;copyright&quot;:&quot;ACME&quot;,&quot;logo&quot;:{&quot;logo_link_href&quot;:&quot;https://myinstance.example.com/&quot;,&quot;svg&quot;:null,&quot;legacy_png_href&quot;:null}},&quot;tools&quot;:[{&quot;label&quot;:&quot;Service A&quot;,&quot;href&quot;:&quot;/service/a&quot;,&quot;description&quot;:&quot;Description service A&quot;,&quot;icon&quot;:&quot;fa-fw fas fa-folder-open&quot;,&quot;open_in_new_tab&quot;:false,&quot;is_active&quot;:true,&quot;shortcut_id&quot;:&quot;&quot;},{&quot;label&quot;:&quot;Git&quot;,&quot;href&quot;:&quot;/service/fake_git&quot;,&quot;description&quot;:&quot;Fake Git&quot;,&quot;icon&quot;:&quot;fa-fw fas fa-tlp-versioning-git&quot;,&quot;open_in_new_tab&quot;:false,&quot;is_active&quot;:false,&quot;shortcut_id&quot;:&quot;plugin_git&quot;},{&quot;label&quot;:&quot;Custom&quot;,&quot;href&quot;:&quot;https://example.com&quot;,&quot;description&quot;:&quot;&quot;,&quot;icon&quot;:&quot;fa-fw fas fa-tlp-baseline&quot;,&quot;open_in_new_tab&quot;:true,&quot;is_active&quot;:false,&quot;shortcut_id&quot;:&quot;&quot;}]}"></tuleap-project-sidebar>
+
+<div class="main main-container">
+
+<div class="navbar-container">
+	<div class="row"></div>
+	<div class="row">
+		<nav>
+			<div class="navbar-item">
+				<a role="button" class="navbar-item-heading">Navigation</a>
+				<div class="navbar-dropdown-menu">
+					<ul>
+					{{#sidebar}}
+						<li><a href="{{href}}">{{text}}</a></li>
+					{{/sidebar}}
+					</ul>
+				</div>
+			</div>
+
+			<div class="navbar-item">
+				<a role="button" class="navbar-item-heading">Actions</a>
+				<div class="navbar-dropdown-menu">
+					<ul>
+					{{#actions}}
+						<li><a href="{{href}}">{{text}}</a></li>
+					{{/actions}}
+					</ul>
+				</div>
+			</div>
+
+			<div class="navbar-item">
+				<a role="button" class="navbar-item-heading">Personal Tools</a>
+				<div class="navbar-dropdown-menu">
+					<ul>
+					{{{personal-tools}}}
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+</div>
+<div id="main-content" class="content skip-to-main-link-target" data-test="main-content">
+<!-- FUSIONFORGE BodyHeader END -->
+
+	<div id="globalWrapper" data-test="mediawiki-content">
+		<div id="column-sidebar">
+		</div>
+		<div id="column-content">
+			<div id="content" class="mw-body-primary" role="main">
+				<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">{{html-title}}</span></h1>
+				<div id="bodyContent" class="mw-body">
+					<div id="siteSub"></div>
+					<div id="contentSub">{{{html-subtitle}}}{{{html-user-language-attributes}}}</div>
+					<div id="contentSub2">{{{html-undelete-link}}}</div>
+					<!-- start content -->
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+						{{{html-body-content}}}
+					</div>
+					{{html-after-content}}
+
+					<div class="printfooter">
+						{{{html-categories}}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="visualClear"></div>
+<!--<div id="footer" role="contentinfo" {{{html-user-language-attributes}}}>
+	{{#data-footer}}
+		{{#data-icons}}{{>Footer}}{{/data-icons}}
+		{{#data-places}}{{>Footer}}{{/data-places}}
+	{{/data-footer}}
+</div>-->
+</div>

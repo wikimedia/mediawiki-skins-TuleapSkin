@@ -1,0 +1,52 @@
+/* fonts */
+body.mediawiki {
+	margin: 0;
+	font-family: var(--tlp-font-family);
+}
+
+#mw-content-text {
+	font-family: var(--tlp-font-family);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--tlp-font-family);
+	color: var(--tlp-dark-color);
+}
+h1#firstHeading.firstHeading {
+	font-family: var(--tlp-font-family);
+}
+.mw-editfont-monospace {
+	font-family: var(--tlp-font-family-mono);
+}
+
+#mw-content-text .mw-editsection a {
+	color: var(--tlp-dark-color-lighter-10);
+}
+#mw-content-text .mw-editsection a:hover {
+	color: var(--tlp-main-color);
+}
+
+/* coloring */
+a, a:visited {
+	color: var(--tlp-main-color);
+}
+#mw-content-text a {
+	color: var(--tlp-main-color);
+}
+#mw-content-text a:hover {
+	text-decoration: underline;
+}
+#mw-content-text p {
+	color: var(--tlp-dark-color);
+}
+#mw-content-text a.new {
+	color: var(--tlp-danger-dark-color);
+}
+.navbar-container a.new {
+	color: var(--tlp-danger-dark-color);
+}
+
+pre, .mw-code, code  {
+	color: var(--tlp-dark-color);
+	font-family: var(--tlp-font-family-mono);
+}
