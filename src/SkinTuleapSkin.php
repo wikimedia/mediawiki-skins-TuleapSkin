@@ -2,6 +2,7 @@
 
 namespace TuleapSkin;
 
+use FormatJson;
 use OutputPage;
 use SkinMustache;
 
@@ -18,11 +19,18 @@ class SkinTuleapSkin extends SkinMustache {
 	public $skinname = 'tuleap';
 
 	/**
+	 * @var TuleapREST
+	 */
+	private $tuleapREST = null;
+
+	/**
+	 * @param TuleapREST $tuleapREST
 	 * @param array|null $options
 	 */
-	public function __construct( $options = null ) {
+	public function __construct( $tuleapREST, $options = null ) {
 		parent::__construct( $options );
 		$this->options['templateDirectory'] = dirname( __DIR__ ) . "/resources/templates/";
+		$this->tuleapREST = $tuleapREST;
 	}
 
 	/**
@@ -81,7 +89,8 @@ class SkinTuleapSkin extends SkinMustache {
 			'sidebar' => $this->buildSidebar()['navigation'],
 			'toolbox' => $this->buildSidebar()['TOOLBOX'],
 			'languages' => $this->buildSidebar()['LANGUAGES'],
-			'personal-tools' => $this->makePersonalToolsList()
+			'personal-tools' => $this->makePersonalToolsList(),
+			'tuleap-project-sidebar-config' => $this->makeTuleapProjectSidebarConfig()
 		] );
 
 		return $skinData;
@@ -125,5 +134,13 @@ class SkinTuleapSkin extends SkinMustache {
 		}
 
 		return $content_actions;
+	}
+
+	/**
+	 * @return string JSON string for Tuleap Project Sidebar
+	 */
+	private function makeTuleapProjectSidebarConfig() {
+		$config = $this->tuleapREST->getProjectSidebarConfig( $this->getUser() );
+		return FormatJson::encode( $config );
 	}
 }

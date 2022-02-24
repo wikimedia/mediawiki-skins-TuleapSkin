@@ -14,7 +14,8 @@
 	"callback": "mwsInitComponents",
 	"ValidSkinNames": {
 		"tuleap": {
-			"class":"TuleapSkin\\SkinTuleapSkin"
+			"class":"TuleapSkin\\SkinTuleapSkin",
+			"services": [ "TuleapREST" ]
 		}
 	},
 	"MessagesDirs": {
@@ -24,6 +25,9 @@
 		"TuleapSkin\\": "src/",
 		"TuleapSkin\\Tests\\": "tests/phpunit"
 	},
+	"ServiceWiringFiles": [
+		"includes/ServiceWiring.php"
+	],
 	"ResourceModules": {
 		"skins.tuleap": {
 			"scripts": [
