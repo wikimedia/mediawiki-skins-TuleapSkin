@@ -48,7 +48,6 @@ class SkinTuleapSkin extends SkinMustache {
 		$out->addModuleStyles( 'mediawiki.skinning.interface' );
 
 		// Add only ResourceModules for active layout and used structures
-		#$out->addModules( 'skins.tuleap-sidebar' );
 		$out->addModuleStyles( 'skins.tuleap.styles' );
 		$out->addModules( 'skins.tuleap' );
 	}
