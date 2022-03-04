@@ -1,0 +1,21 @@
+/** ooui button progressive */
+body.mediawiki #mw-content-text .oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button {
+	background-color: var(--tlp-main-color);
+	border-color: var(--tlp-main-color);
+}
+#mw-content-text .mw-ui-button.mw-ui-progressive {
+	background-color: var(--tlp-main-color);
+	border-color: var(--tlp-main-color);
+}
+
+body.mediawiki  #mw-content-text .oo-ui-inputWidget-input:focus {
+	border-color: var(--tlp-main-color);
+	box-shadow: inset 0 0 0 1px var(--tlp-main-color);
+}
+#mw-content-text .oo-ui-checkboxInputWidget.oo-ui-widget-enabled [type='checkbox']:checked + span {
+	background-color: var(--tlp-main-color);
+	border-color: var(--tlp-main-color);
+}
+#mw-content-text .oo-ui-flaggedElement-progressive a.oo-ui-buttonElement-button .oo-ui-labelElement-label {
+	color: var(--tlp-white-color);
+}
