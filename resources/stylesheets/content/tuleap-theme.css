@@ -1,19 +1,31 @@
+
+
 /* fonts */
 body.mediawiki {
 	margin: 0;
 	font-family: var(--tlp-font-family);
+	overflow-x: hidden;
 }
 
 #mw-content-text {
 	font-family: var(--tlp-font-family);
+	font-size: 14px;
+	line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--tlp-font-family);
 	color: var(--tlp-dark-color);
+	text-rendering: optimizeLegibility;
 }
 h1#firstHeading.firstHeading {
 	font-family: var(--tlp-font-family);
+	margin: 0 var(--tlp-medium-spacing) 0 0;
+	font-size: 36px;
+	font-weight: 600;
+	line-height: 40px;
+	border-bottom: none;
+	width: auto;
 }
 .mw-editfont-monospace {
 	font-family: var(--tlp-font-family-mono);
@@ -49,4 +61,10 @@ a, a:visited {
 pre, .mw-code, code  {
 	color: var(--tlp-dark-color);
 	font-family: var(--tlp-font-family-mono);
+}
+
+blockquote {
+	border-left: 5px solid var(--tlp-main-color);
+	padding: var(--tlp-small-spacing);
+	background-color: var( --tlp-background-color );
 }

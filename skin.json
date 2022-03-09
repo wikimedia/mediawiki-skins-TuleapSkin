@@ -12,14 +12,14 @@
 		"MediaWiki": ">= 1.35.0"
 	},
 	"callback": "mwsInitComponents",
+	"MessagesDirs": {
+		"TuleapSkin": "i18n"
+	},
 	"ValidSkinNames": {
 		"tuleap": {
 			"class":"TuleapSkin\\SkinTuleapSkin",
 			"services": [ "TuleapREST" ]
 		}
-	},
-	"MessagesDirs": {
-		"TuleapSkin": "i18n"
 	},
 	"AutoloadNamespaces": {
 		"TuleapSkin\\": "src/",
@@ -41,9 +41,14 @@
 			"styles": [
 				"stylesheets/main.css",
 				"stylesheets/tuleap-vars.css",
-				"stylesheets/tuleap-theme.css",
-				"stylesheets/oo-ui.css",
-				"stylesheets/toc.css"
+				"stylesheets/content//tuleap-theme.css",
+				"stylesheets/structure/fixed-header.css",
+				"stylesheets/structure/navbar.css",
+				"stylesheets/structure/structure.css",
+				"stylesheets/structure/title-section.css",
+				"stylesheets/structure/dropdown.css",
+				"stylesheets/content/oo-ui.css",
+				"stylesheets/content/toc.css"
 			]
 		},
 		"skins.tuleap-sidebar": {

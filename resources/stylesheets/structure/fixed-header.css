@@ -1,0 +1,43 @@
+.fixed-container {
+	position: fixed;
+	z-index: 2004;
+	top: 0;
+	right: 0;
+	justify-content: space-between;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: var(--tlp-medium-spacing) var(--tlp-medium-spacing) 0;
+	transition: padding ease-in-out .1s;
+}
+.fixed-container .mw-tlp-fixed-btn {
+	height: 40px;
+	margin: 0 0 0 var(--tlp-small-spacing);
+	transition: padding ease-in-out .1s,box-shadow ease-in-out .1s;
+	border-radius: 30px;
+}
+
+.mw-tlp-fixed-btn {
+	border: 1px solid var(--tlp-white-color);
+	background: var(--tlp-white-color);
+	box-shadow: var(--tlp-button-shadow);
+	color: var(--tlp-dark-color);
+	font-family: var(--tlp-font-family);
+	font-size: .875rem;
+	font-weight: 500;
+	letter-spacing: 0;
+	line-height: 1.5rem;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	text-transform: none;
+	vertical-align: middle;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.mw-tlp-fixed-btn:hover {
+	background-color: var(--tlp-neutral-light-color-lighter-40);
+}
+
+.mw-tlp-fixed-btn + .mw-tlp-skin-btn-dropdown-menu {
+	right: 0;
+}

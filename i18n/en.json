@@ -1,3 +1,8 @@
 {
-	"tuleapskin-desc": "Tuleap Skin"
+	"tuleapskin-desc": "Tuleap Skin",
+	"tlp-personal-menu-title": "Personal",
+	"tlp-main-menu-title": "MediaWiki",
+	"tlp-tools-menu-title": "Tools",
+	"tlp-actions-menu-title": "Actions",
+	"tlp-administration": "Administration"
 }

@@ -5,77 +5,88 @@
 
 <tuleap-project-sidebar config="{{tuleap-project-sidebar-config}}"></tuleap-project-sidebar>
 
-<div class="main main-container">
-
-<div class="navbar-container">
-	<div class="row"></div>
+<div class="main-container">
+<div class="fixed-container">
+	<div class="mw-tlp-dropdown">
+	<button role="button" class="mw-tlp-fixed-btn">{{msg-tlp-personal-menu-title}}</button>
+	<div class="mw-tlp-skin-btn-dropdown-menu">
+		<ul>
+		{{{personal-tools}}}
+		</ul>
+	</div>
+	</div>
+</div>
+<div class="navbar">
 	<div class="row">
 		<nav>
-			<div class="navbar-item">
-				<a role="button" class="navbar-item-heading">Navigation</a>
-				<div class="navbar-dropdown-menu">
+			<div class="mw-tlp-dropdown">
+				<a role="button" class="mw-tlp-skin-navbar-item" href="{{main-menu-href}}">{{msg-tlp-main-menu-title}}</a>
+				<div class="mw-tlp-skin-btn-dropdown-menu">
 					<ul>
 					{{#sidebar}}
-						<li><a href="{{href}}">{{text}}</a></li>
+						<li><a id="{{id}}" href="{{href}}">{{text}}</a></li>
 					{{/sidebar}}
 					</ul>
-				</div>
-			</div>
 
-			<div class="navbar-item">
-				<a role="button" class="navbar-item-heading">Actions</a>
-				<div class="navbar-dropdown-menu">
 					<ul>
-					{{#actions}}
-						<li><a href="{{href}}">{{text}}</a></li>
-					{{/actions}}
-					</ul>
-				</div>
-			</div>
-
-			<div class="navbar-item">
-				<a role="button" class="navbar-item-heading">Personal Tools</a>
-				<div class="navbar-dropdown-menu">
-					<ul>
-					{{{personal-tools}}}
+						<li class="mw-tlp-separator"></li>
+						<li><a class="mw-tlp-skin-admin">{{msg-tlp-administration}}</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</div>
 </div>
-<div id="main-content" class="content skip-to-main-link-target" data-test="main-content">
-<!-- FUSIONFORGE BodyHeader END -->
-
-	<div id="globalWrapper" data-test="mediawiki-content">
-		<div id="column-sidebar">
-		</div>
-		<div id="column-content">
-			<div id="content" class="mw-body-primary" role="main">
-				<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">{{html-title}}</span></h1>
-				<div id="bodyContent" class="mw-body">
-					<div id="siteSub"></div>
-					<div id="contentSub">{{{html-subtitle}}}{{{html-user-language-attributes}}}</div>
-					<div id="contentSub2">{{{html-undelete-link}}}</div>
-					<!-- start content -->
-					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
-						{{{html-body-content}}}
-					</div>
-					{{html-after-content}}
-
-					<div class="printfooter">
-						{{{html-categories}}}
+<div id="main-content" class="content">
+	<div id="content" class="mw-body-primary" role="main">
+		<div class="title-section">
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">{{html-title}}</span></h1>
+			<div class="title-section-actions">
+				<div class="mw-tlp-dropdown title-section-spacer">
+					<button role="button" class="mw-tlp-skin-btn-primary">{{msg-tlp-tools-menu-title}}</button>
+					<div class="mw-tlp-skin-btn-dropdown-menu">
+						<ul>
+							{{{toolbox}}}
+						</ul>
 					</div>
 				</div>
+
+				<div class="mw-tlp-dropdown title-section-spacer">
+					<button role="button" class="mw-tlp-skin-btn-primary">{{msg-tlp-actions-menu-title}}</button>
+					<div class="mw-tlp-skin-btn-dropdown-menu">
+						<ul>
+							{{#actions}}
+								<li><a id="{{id}}" href="{{href}}">{{text}}</a></li>
+							{{/actions}}
+						</ul>
+					</div>
+				</div>
+				<div class="title-section-actions-spacer"></div>
+				{{#data-search-box}}
+				<div class="mw-tlp-search">
+					<form action="{{form-action}}" role="search" class="mw-portlet" id="p-search">
+						<input type="hidden" name="title" value="{{page-title}}">
+						{{{html-input}}}
+					</form>
+				</div>
+				{{/data-search-box}}
+			</div>
+		</div>
+
+		<div id="bodyContent" class="mw-body">
+			<div id="siteSub"></div>
+			<div id="contentSub">{{{html-subtitle}}}{{{html-user-language-attributes}}}</div>
+			<div id="contentSub2">{{{html-undelete-link}}}</div>
+			<!-- start content -->
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+				{{{html-body-content}}}
+			</div>
+			{{html-after-content}}
+
+			<div class="printfooter">
+				{{{html-categories}}}
 			</div>
 		</div>
 	</div>
-</div>
-<div class="visualClear"></div>
-<!--<div id="footer" role="contentinfo" {{{html-user-language-attributes}}}>
-	{{#data-footer}}
-		{{#data-icons}}{{>Footer}}{{/data-icons}}
-		{{#data-places}}{{>Footer}}{{/data-places}}
-	{{/data-footer}}
-</div>-->
+
 </div>

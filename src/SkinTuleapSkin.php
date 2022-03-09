@@ -5,6 +5,7 @@ namespace TuleapSkin;
 use FormatJson;
 use OutputPage;
 use SkinMustache;
+use Title;
 
 /**
  * SkinTemplate class for the Tuleap skin
@@ -71,6 +72,7 @@ class SkinTuleapSkin extends SkinMustache {
 	 * @return array
 	 */
 	public function getTemplateData() {
+		$mainpage = Title::newMainPage();
 		$parentData = parent::getTemplateData();
 
 		$content_navigation = $this->buildContentNavigationUrls();
@@ -86,38 +88,35 @@ class SkinTuleapSkin extends SkinMustache {
 			'actions' => $actions,
 			'data-footer' => $footerIcons,
 			'sidebar' => $this->buildSidebar()['navigation'],
-			'toolbox' => $this->buildSidebar()['TOOLBOX'],
+			'toolbox' => $this->getToolbox(),
 			'languages' => $this->buildSidebar()['LANGUAGES'],
 			'personal-tools' => $this->makePersonalToolsList(),
-			'tuleap-project-sidebar-config' => $this->makeTuleapProjectSidebarConfig()
+			'tuleap-project-sidebar-config' => $this->makeTuleapProjectSidebarConfig(),
+			'msg-tlp-personal-menu-title' => $this->getSkin()->msg( 'tlp-personal-menu-title' )->text(),
+			'msg-tlp-main-menu-title' => $this->getSkin()->msg( 'tlp-main-menu-title' )->text(),
+			'msg-tlp-actions-menu-title' => $this->getSkin()->msg( 'tlp-actions-menu-title' )->text(),
+			'msg-tlp-tools-menu-title' => $this->getSkin()->msg( 'tlp-tools-menu-title' )->text(),
+			'msg-tlp-administration' => $this->getSkin()->msg( 'tlp-administration' )->text(),
+			'main-menu-href' => $mainpage->getLocalURL()
 		] );
 
 		return $skinData;
 	}
 
 	/**
-	 * an array of edit links by default used for the tabs
+	 * copy from SkinTemplate.php, not available in SkinMustache
 	 * @param array $content_navigation
 	 * @return array
 	 */
 	private function buildContentActionUrls( $content_navigation ) {
-		// content_actions has been replaced with content_navigation for backwards
-		// compatibility and also for skins that just want simple tabs content_actions
-		// is now built by flattening the content_navigation arrays into one
-
 		$content_actions = [];
 
 		foreach ( $content_navigation as $links ) {
 			foreach ( $links as $key => $value ) {
 				if ( isset( $value['redundant'] ) && $value['redundant'] ) {
-					// Redundant tabs are dropped from content_actions
 					continue;
 				}
 
-				// content_actions used to have ids built using the "ca-$key" pattern
-				// so the xmlID based id is much closer to the actual $key that we want
-				// for that reason we'll just strip out the ca- if present and use
-				// the latter potion of the "id" as the $key
 				if ( isset( $value['id'] ) && substr( $value['id'], 0, 3 ) == 'ca-' ) {
 					$key = substr( $value['id'], 3 );
 				}
@@ -141,5 +140,18 @@ class SkinTuleapSkin extends SkinMustache {
 	private function makeTuleapProjectSidebarConfig() {
 		$config = $this->tuleapREST->getProjectSidebarConfig( $this->getUser() );
 		return FormatJson::encode( $config );
+	}
+
+	/**
+	 *
+	 * @return string
+	 */
+	private function getToolbox() {
+		$tools = $this->buildSidebar()['TOOLBOX'];
+		$html = '';
+		foreach ( $tools as $key => $item ) {
+			$html .= $this->makeListItem( $key, $item );
+		}
+		return $html;
 	}
 }
