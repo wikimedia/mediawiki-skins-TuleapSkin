@@ -4,5 +4,9 @@
 			"Brettchenweber"
 		]
 	},
-	"tuleapskin-desc": "Tuleap-Oberfläche"
+	"tuleapskin-desc": "Tuleap-Oberfläche",
+	"tlp-personal-menu-title": "Persönlich",
+	"tlp-tools-menu-title": "Werkzeuge",
+	"tlp-actions-menu-title": "Aktionen",
+	"tlp-administration": "Verwaltung"
 }

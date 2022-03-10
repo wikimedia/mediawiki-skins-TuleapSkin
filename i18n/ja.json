@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"MathXplore"
+		]
+	},
+	"tlp-personal-menu-title": "個人",
+	"tlp-tools-menu-title": "ツール",
+	"tlp-actions-menu-title": "操作",
+	"tlp-administration": "管理"
+}

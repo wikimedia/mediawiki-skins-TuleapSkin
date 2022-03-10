@@ -1,8 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gomoko"
+			"Gomoko",
+			"Verdy p"
 		]
 	},
-	"tuleapskin-desc": "Habillage Tuleap"
+	"tuleapskin-desc": "Habillage Tuleap",
+	"tlp-personal-menu-title": "Personnel",
+	"tlp-tools-menu-title": "Outils",
+	"tlp-actions-menu-title": "Actions",
+	"tlp-administration": "Administration"
 }

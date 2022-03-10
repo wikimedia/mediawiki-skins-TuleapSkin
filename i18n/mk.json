@@ -4,5 +4,9 @@
 			"Bjankuloski06"
 		]
 	},
-	"tuleapskin-desc": "Руво Tuleap"
+	"tuleapskin-desc": "Руво Tuleap",
+	"tlp-personal-menu-title": "Лично",
+	"tlp-tools-menu-title": "Алатки",
+	"tlp-actions-menu-title": "Дејства",
+	"tlp-administration": "Администрација"
 }
