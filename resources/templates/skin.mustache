@@ -3,7 +3,7 @@
 {{html-site-notice}}
 <div class="row content-container">
 
-<tuleap-project-sidebar config="{{tuleap-project-sidebar-config}}"></tuleap-project-sidebar>
+<tuleap-project-sidebar config="{{tuleap-project-sidebar-config}}" {{#tuleap-project-sidebar-collapsed}}collapsed{{/tuleap-project-sidebar-collapsed}}></tuleap-project-sidebar>
 
 <div class="main-container">
 <div class="fixed-container">
@@ -75,7 +75,7 @@
 
 		<div id="bodyContent" class="mw-body">
 			<div id="siteSub"></div>
-			<div id="contentSub">{{{html-subtitle}}}{{{html-user-language-attributes}}}</div>
+			<div id="contentSub">{{{html-subtitle}}}</div>
 			<div id="contentSub2">{{{html-undelete-link}}}</div>
 			<!-- start content -->
 			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">

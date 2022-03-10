@@ -8,6 +8,10 @@ body {
 	width: 100%;
 }
 
+tuleap-project-sidebar[collapsed] + .main-container {
+	max-width: calc( 100vw - 50px);
+	width: 100%;
+}
 #main-content {
 	display: flex;
 }

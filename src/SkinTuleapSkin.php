@@ -2,7 +2,6 @@
 
 namespace TuleapSkin;
 
-use FormatJson;
 use OutputPage;
 use SkinMustache;
 use Title;
@@ -20,18 +19,19 @@ class SkinTuleapSkin extends SkinMustache {
 	public $skinname = 'tuleap';
 
 	/**
-	 * @var TuleapREST
+	 * @var TuleapSidebar
 	 */
-	private $tuleapREST = null;
+	private $tuleapSidebar = null;
 
 	/**
-	 * @param TuleapREST $tuleapREST
+	 * @param @param TuleapConnection $tuleapConnection
 	 * @param array|null $options
 	 */
-	public function __construct( $tuleapREST, $options = null ) {
+	public function __construct( $tuleapConnection, $options = null ) {
 		parent::__construct( $options );
 		$this->options['templateDirectory'] = dirname( __DIR__ ) . "/resources/templates/";
-		$this->tuleapREST = $tuleapREST;
+
+		$this->tuleapSidebar = new TuleapSidebar( $tuleapConnection );
 	}
 
 	/**
@@ -51,6 +51,10 @@ class SkinTuleapSkin extends SkinMustache {
 		// Add only ResourceModules for active layout and used structures
 		$out->addModuleStyles( 'skins.tuleap.styles' );
 		$out->addModules( 'skins.tuleap' );
+
+		// Add styles from user
+		$styles = $this->tuleapSidebar->getStyles();
+		$out->addInlineStyle( $styles );
 	}
 
 	/**
@@ -78,8 +82,8 @@ class SkinTuleapSkin extends SkinMustache {
 		$content_navigation = $this->buildContentNavigationUrls();
 		$footerData = $this->getFooterIcons();
 		$footerIcons = [
-			'data-icons' => $footerData['poweredby'],
-			'data-places' => $footerData['places']['about'] ?? false
+			'data-icons' => $footerData[ 'poweredby' ],
+			'data-places' => $footerData[ 'places' ][ 'about' ] ?? false
 		];
 
 		$actions = $this->buildContentActionUrls( $content_navigation );
@@ -87,9 +91,9 @@ class SkinTuleapSkin extends SkinMustache {
 		$skinData = array_merge( $parentData, [
 			'actions' => $actions,
 			'data-footer' => $footerIcons,
-			'sidebar' => $this->buildSidebar()['navigation'],
+			'sidebar' => $this->buildSidebar()[ 'navigation' ],
 			'toolbox' => $this->getToolbox(),
-			'languages' => $this->buildSidebar()['LANGUAGES'],
+			'languages' => $this->buildSidebar()[ 'LANGUAGES' ],
 			'personal-tools' => $this->makePersonalToolsList(),
 			'tuleap-project-sidebar-config' => $this->makeTuleapProjectSidebarConfig(),
 			'msg-tlp-personal-menu-title' => $this->getSkin()->msg( 'tlp-personal-menu-title' )->text(),
@@ -99,6 +103,12 @@ class SkinTuleapSkin extends SkinMustache {
 			'msg-tlp-administration' => $this->getSkin()->msg( 'tlp-administration' )->text(),
 			'main-menu-href' => $mainpage->getLocalURL()
 		] );
+
+		if ( $this->tuleapSidebar->isCollapsed() ) {
+			$skinData = array_push( $skinData, [
+				'tuleap-project-sidebar-collapsed' => $this->tuleapSidebar->isCollapsed()
+			] );
+		}
 
 		return $skinData;
 	}
@@ -113,15 +123,15 @@ class SkinTuleapSkin extends SkinMustache {
 
 		foreach ( $content_navigation as $links ) {
 			foreach ( $links as $key => $value ) {
-				if ( isset( $value['redundant'] ) && $value['redundant'] ) {
+				if ( isset( $value[ 'redundant' ] ) && $value[ 'redundant' ] ) {
 					continue;
 				}
 
-				if ( isset( $value['id'] ) && substr( $value['id'], 0, 3 ) == 'ca-' ) {
-					$key = substr( $value['id'], 3 );
+				if ( isset( $value[ 'id' ] ) && substr( $value[ 'id' ], 0, 3 ) == 'ca-' ) {
+					$key = substr( $value[ 'id' ], 3 );
 				}
 
-				if ( isset( $content_actions[$key] ) ) {
+				if ( isset( $content_actions[ $key ] ) ) {
 					wfDebug( __METHOD__ . ": Found a duplicate key for $key while flattening " .
 						"content_navigation into content_actions." );
 					continue;
@@ -135,11 +145,10 @@ class SkinTuleapSkin extends SkinMustache {
 	}
 
 	/**
-	 * @return string JSON string for Tuleap Project Sidebar
+	 * @return string
 	 */
 	private function makeTuleapProjectSidebarConfig() {
-		$config = $this->tuleapREST->getProjectSidebarConfig( $this->getUser() );
-		return FormatJson::encode( $config );
+		return $this->tuleapSidebar->getConfiguration();
 	}
 
 	/**
@@ -147,7 +156,7 @@ class SkinTuleapSkin extends SkinMustache {
 	 * @return string
 	 */
 	private function getToolbox() {
-		$tools = $this->buildSidebar()['TOOLBOX'];
+		$tools = $this->buildSidebar()[ 'TOOLBOX' ];
 		$html = '';
 		foreach ( $tools as $key => $item ) {
 			$html .= $this->makeListItem( $key, $item );
