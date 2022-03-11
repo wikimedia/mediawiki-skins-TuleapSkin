@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ykhwong"
+		]
+	},
+	"tlp-personal-menu-title": "개인",
+	"tlp-tools-menu-title": "도구",
+	"tlp-actions-menu-title": "동작",
+	"tlp-administration": "관리"
+}
