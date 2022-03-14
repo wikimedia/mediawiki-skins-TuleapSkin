@@ -1,8 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sabelöga"
+			"Sabelöga",
+			"WikiPhoenix"
 		]
 	},
-	"tuleapskin-desc": "Tuleap-utseende"
+	"tuleapskin-desc": "Tuleap-utseende",
+	"tlp-personal-menu-title": "Personligt",
+	"tlp-tools-menu-title": "Verktyg",
+	"tlp-actions-menu-title": "Åtgärder",
+	"tlp-administration": "Administration"
 }
