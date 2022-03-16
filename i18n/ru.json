@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Kareyac",
 			"Okras"
 		]
 	},
-	"tlp-tools-menu-title": "Инструменты"
+	"tlp-tools-menu-title": "Инструменты",
+	"tlp-actions-menu-title": "Действия"
 }
