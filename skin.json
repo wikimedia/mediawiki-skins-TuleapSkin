@@ -9,7 +9,10 @@
 	"descriptionmsg": "tuleapskin-desc",
 	"type": "skin",
 	"requires": {
-		"MediaWiki": ">= 1.35.0"
+		"MediaWiki": ">= 1.35.0",
+		"extensions": {
+			"TuleapIntegration": "*"
+		}
 	},
 	"callback": "mwsInitComponents",
 	"MessagesDirs": {
@@ -18,16 +21,13 @@
 	"ValidSkinNames": {
 		"tuleap": {
 			"class":"TuleapSkin\\SkinTuleapSkin",
-			"services": [ "TuleapREST" ]
+			"services": [ "TuleapConnection" ]
 		}
 	},
 	"AutoloadNamespaces": {
 		"TuleapSkin\\": "src/",
 		"TuleapSkin\\Tests\\": "tests/phpunit"
 	},
-	"ServiceWiringFiles": [
-		"includes/ServiceWiring.php"
-	],
 	"ResourceModules": {
 		"skins.tuleap": {
 			"scripts": [
