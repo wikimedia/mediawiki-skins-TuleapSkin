@@ -24,14 +24,22 @@ class SkinTuleapSkin extends SkinMustache {
 	private $tuleapSidebar = null;
 
 	/**
-	 * @param @param TuleapConnection $tuleapConnection
+	 *
+	 * @var array
+	 */
+	private $content_navigation = [];
+
+	/**
+	 * @param TuleapConnection $tuleapConnection
+	 * @param Config $config
 	 * @param array|null $options
 	 */
-	public function __construct( $tuleapConnection, $options = null ) {
+	public function __construct( $tuleapConnection, $config, $options = null ) {
 		parent::__construct( $options );
 		$this->options['templateDirectory'] = dirname( __DIR__ ) . "/resources/templates/";
 
-		$this->tuleapSidebar = new TuleapSidebar( $tuleapConnection );
+		$id = $config->get( 'TuleapProjectId' );
+		$this->tuleapSidebar = new TuleapSidebar( $tuleapConnection, $id );
 	}
 
 	/**
@@ -50,7 +58,7 @@ class SkinTuleapSkin extends SkinMustache {
 
 		// Add only ResourceModules for active layout and used structures
 		$out->addModuleStyles( 'skins.tuleap.styles' );
-		$out->addModules( 'skins.tuleap' );
+		$out->addModules( 'skins.tuleap-sidebar' );
 
 		// Add styles from user
 		$styles = $this->tuleapSidebar->getStyles();
@@ -79,19 +87,12 @@ class SkinTuleapSkin extends SkinMustache {
 		$mainpage = Title::newMainPage();
 		$parentData = parent::getTemplateData();
 
-		$content_navigation = $this->buildContentNavigationUrls();
-		$footerData = $this->getFooterIcons();
-		$footerIcons = [
-			'data-icons' => $footerData[ 'poweredby' ],
-			'data-places' => $footerData[ 'places' ][ 'about' ] ?? false
-		];
-
-		$actions = $this->buildContentActionUrls( $content_navigation );
+		$this->content_navigation = $this->buildContentNavigationUrls();
 
 		$skinData = array_merge( $parentData, [
-			'actions' => $actions,
-			'data-footer' => $footerIcons,
+			'editaction' => $this->getEditAction(),
 			'sidebar' => $this->buildSidebar()[ 'navigation' ],
+			'actions' => $this->buildContentActionUrls(),
 			'toolbox' => $this->getToolbox(),
 			'languages' => $this->buildSidebar()[ 'LANGUAGES' ],
 			'personal-tools' => $this->makePersonalToolsList(),
@@ -100,7 +101,6 @@ class SkinTuleapSkin extends SkinMustache {
 			'msg-tlp-main-menu-title' => $this->getSkin()->msg( 'tlp-main-menu-title' )->text(),
 			'msg-tlp-actions-menu-title' => $this->getSkin()->msg( 'tlp-actions-menu-title' )->text(),
 			'msg-tlp-tools-menu-title' => $this->getSkin()->msg( 'tlp-tools-menu-title' )->text(),
-			'msg-tlp-administration' => $this->getSkin()->msg( 'tlp-administration' )->text(),
 			'main-menu-href' => $mainpage->getLocalURL()
 		] );
 
@@ -114,14 +114,26 @@ class SkinTuleapSkin extends SkinMustache {
 	}
 
 	/**
+	 * @return string
+	 */
+	private function getEditAction() {
+		$action = [];
+		if ( isset( $this->content_navigation[ 'views' ][ 'edit' ] ) ) {
+			$action = $this->content_navigation[ 'views' ][ 'edit' ];
+			unset( $this->content_navigation[ 'views' ][ 'edit' ] );
+		}
+
+		return $action;
+	}
+
+	/**
 	 * copy from SkinTemplate.php, not available in SkinMustache
-	 * @param array $content_navigation
 	 * @return array
 	 */
-	private function buildContentActionUrls( $content_navigation ) {
+	private function buildContentActionUrls() {
 		$content_actions = [];
 
-		foreach ( $content_navigation as $links ) {
+		foreach ( $this->content_navigation as $links ) {
 			foreach ( $links as $key => $value ) {
 				if ( isset( $value[ 'redundant' ] ) && $value[ 'redundant' ] ) {
 					continue;

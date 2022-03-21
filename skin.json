@@ -21,7 +21,10 @@
 	"ValidSkinNames": {
 		"tuleap": {
 			"class":"TuleapSkin\\SkinTuleapSkin",
-			"services": [ "TuleapConnection" ]
+			"services": [
+				"TuleapConnection",
+				"MainConfig"
+			]
 		}
 	},
 	"AutoloadNamespaces": {
@@ -29,14 +32,6 @@
 		"TuleapSkin\\Tests\\": "tests/phpunit"
 	},
 	"ResourceModules": {
-		"skins.tuleap": {
-			"scripts": [
-				"ext.tuleapSkin.js"
-			],
-			"dependencies": [
-				"skins.tuleap-sidebar"
-			]
-		},
 		"skins.tuleap.styles": {
 			"styles": [
 				"stylesheets/main.css",
@@ -46,9 +41,11 @@
 				"stylesheets/structure/navbar.css",
 				"stylesheets/structure/structure.css",
 				"stylesheets/structure/title-section.css",
+				"stylesheets/structure/buttons.css",
 				"stylesheets/structure/dropdown.css",
 				"stylesheets/content/oo-ui.css",
-				"stylesheets/content/toc.css"
+				"stylesheets/content/toc.css",
+				"stylesheets/icons/fontawesome.css"
 			]
 		},
 		"skins.tuleap-sidebar": {

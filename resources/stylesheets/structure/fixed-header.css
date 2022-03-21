@@ -21,6 +21,7 @@
 	border: 1px solid var(--tlp-white-color);
 	background: var(--tlp-white-color);
 	box-shadow: var(--tlp-button-shadow);
+	padding: 0 var(--tlp-medium-spacing);
 	color: var(--tlp-dark-color);
 	font-family: var(--tlp-font-family);
 	font-size: .875rem;
