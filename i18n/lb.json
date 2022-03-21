@@ -4,5 +4,9 @@
 			"Robby"
 		]
 	},
-	"tuleapskin-desc": "Tuleap Interface"
+	"tuleapskin-desc": "Tuleap Interface",
+	"tlp-personal-menu-title": "Perséinlech",
+	"tlp-tools-menu-title": "Geschierkëscht",
+	"tlp-actions-menu-title": "Aktiounen",
+	"tlp-administration": "Administratioun"
 }
