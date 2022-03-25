@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Trisorn Triboon"
+		]
+	},
+	"tlp-personal-menu-title": "ส่วนบุคคล",
+	"tlp-tools-menu-title": "เครื่องมือ",
+	"tlp-actions-menu-title": "การกระทำ",
+	"tlp-administration": "การบริหาร"
+}
