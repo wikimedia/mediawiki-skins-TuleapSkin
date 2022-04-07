@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"DiegoAmbrocio"
+		]
+	},
+	"tlp-personal-menu-title": "Personal",
+	"tlp-tools-menu-title": "Herramientas",
+	"tlp-actions-menu-title": "Acciones",
+	"tlp-administration": "Administración"
+}
