@@ -1,0 +1,51 @@
+.mw-tlp-skin-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 40px;
+	padding: 0 var(--tlp-medium-spacing);
+	overflow: hidden;
+	transition: box-shadow 75ms ease-in-out,background 75ms ease-in-out,border-color 75ms ease-in-out;
+	border: 1px solid transparent;
+	border-radius: var(--tlp-medium-radius);
+	box-shadow: var(--tlp-button-shadow);
+	font-family: var(--tlp-font-family);
+	font-size: .875rem;
+	font-weight: 500;
+	letter-spacing: 0;
+	line-height: 1.5rem;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	text-transform: none;
+	vertical-align: middle;
+	white-space: nowrap;
+	cursor: pointer;
+	position: relative;
+}
+
+.mw-tlp-skin-btn-primary {
+	border-color: var(--tlp-main-color);
+	background: var(--tlp-main-color);
+	color: var(--tlp-white-color);
+}
+
+.mw-tlp-skin-btn-primary a {
+	color: var(--tlp-white-color);
+}
+.mw-tlp-skin-btn-primary a:hover {
+	text-decoration: none;
+}
+.mw-tlp-skin-btn-primary:hover {
+	border-color: var(--tlp-main-color-darker-05);
+	background: var(--tlp-main-color-darker-05);
+}
+
+.mw-tlp-skin-btn-secondary {
+	border: 1px solid var(--tlp-white-color);
+	background: var(--tlp-white-color);
+	color: var(--tlp-dark-color);
+}
+
+.mw-tlp-skin-btn-secondary:hover {
+	background: var(--tlp-neutral-light-color-lighter-40);
+}

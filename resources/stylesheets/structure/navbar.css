@@ -45,7 +45,7 @@ a.mw-tlp-skin-navbar-item {
 	right: 8px;
 	transition: color 75ms;
 	opacity: .5;
-	font-family: "Font Awesome 5 Free";
+	font-family: "fontawesome";
 	font-size: .625rem;
 }
 .navbar .mw-tlp-skin-btn-dropdown-menu {

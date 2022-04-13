@@ -16,3 +16,7 @@ tuleap-project-sidebar[collapsed] + .main-container {
 	display: flex;
 }
 
+.content-end-spacer {
+	height: 46px;
+	background-color: var(--tlp-background-color);
+}

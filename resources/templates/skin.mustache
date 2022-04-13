@@ -28,10 +28,6 @@
 					{{/sidebar}}
 					</ul>
 
-					<ul>
-						<li class="mw-tlp-separator"></li>
-						<li><a class="mw-tlp-skin-admin">{{msg-tlp-administration}}</a></li>
-					</ul>
 				</div>
 			</div>
 		</nav>
@@ -42,25 +38,28 @@
 		<div class="title-section">
 			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">{{html-title}}</span></h1>
 			<div class="title-section-actions">
+				{{#editaction}}
+					<div class="title-section-spacer">
+						<button role="button" class="mw-tlp-skin-btn mw-tlp-skin-btn-primary" ><a id="{{id}}" href="{{href}}">{{text}}</a></button>
+					</div>
+				{{/editaction}}
 				<div class="mw-tlp-dropdown title-section-spacer">
-					<button role="button" class="mw-tlp-skin-btn-primary">{{msg-tlp-tools-menu-title}}</button>
+					<button role="button" class="mw-tlp-skin-btn mw-tlp-skin-btn-secondary ">{{msg-tlp-tools-menu-title}}</button>
 					<div class="mw-tlp-skin-btn-dropdown-menu">
 						<ul>
+						<li class="mw-tlp-skin-dropdown-title">{{msg-tlp-actions-menu-title}}</li>
+						{{#actions}}
+								<li><a id="{{id}}" href="{{href}}">{{text}}</a></li>
+						{{/actions}}
+						</ul>
+						<ul>
+							<li class="mw-tlp-separator"></li>
+							<li class="mw-tlp-skin-dropdown-title">{{msg-tlp-tools-menu-title}}</li>
 							{{{toolbox}}}
 						</ul>
 					</div>
 				</div>
 
-				<div class="mw-tlp-dropdown title-section-spacer">
-					<button role="button" class="mw-tlp-skin-btn-primary">{{msg-tlp-actions-menu-title}}</button>
-					<div class="mw-tlp-skin-btn-dropdown-menu">
-						<ul>
-							{{#actions}}
-								<li><a id="{{id}}" href="{{href}}">{{text}}</a></li>
-							{{/actions}}
-						</ul>
-					</div>
-				</div>
 				<div class="title-section-actions-spacer"></div>
 				{{#data-search-box}}
 				<div class="mw-tlp-search">
@@ -87,6 +86,7 @@
 				{{{html-categories}}}
 			</div>
 		</div>
+	<div class="content-end-spacer"></div>
 	</div>
 
 </div>
