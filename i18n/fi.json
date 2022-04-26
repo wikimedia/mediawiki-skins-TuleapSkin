@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Korjaus1"
+			"Korjaus1",
+			"Rönttönen"
 		]
 	},
+	"tlp-personal-menu-title": "Henkilökohtainen",
 	"tlp-tools-menu-title": "Työkalut",
 	"tlp-actions-menu-title": "Toiminnot"
 }
