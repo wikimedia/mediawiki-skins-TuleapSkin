@@ -5,5 +5,7 @@
 		]
 	},
 	"tlp-personal-menu-title": "Persoonlijk",
-	"tlp-tools-menu-title": "Hulpmiddelen"
+	"tlp-tools-menu-title": "Hulpmiddelen",
+	"tlp-actions-menu-title": "Handelingen",
+	"tlp-administration": "Beheer"
 }
