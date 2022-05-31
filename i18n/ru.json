@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Gulka.nik",
 			"Kareyac",
 			"Okras"
 		]
 	},
+	"tlp-personal-menu-title": "Личное",
 	"tlp-tools-menu-title": "Инструменты",
-	"tlp-actions-menu-title": "Действия"
+	"tlp-actions-menu-title": "Действия",
+	"tlp-administration": "Администрация"
 }
