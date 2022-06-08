@@ -1,8 +1,9 @@
 {
+	"name": "tuleap-skin",
 	"private": true,
 	"scripts": {
 		"test": "grunt test",
-		"postinstall": "cp node_modules/@tuleap/project-sidebar/dist/project-sidebar.umd.js resources/lib/"
+		"postinstall": "cp node_modules/@tuleap/project-sidebar/dist/project-sidebar.umd.js resources/lib/ && cp node_modules/@tuleap/project-sidebar/dist/style.css resources/lib/project-sidebar.css"
 	},
 	"devDependencies": {
 		"grunt": "1.4.0",

@@ -35,6 +35,7 @@
 		"skins.tuleap.styles": {
 			"styles": [
 				"stylesheets/main.css",
+				"lib/project-sidebar.css",
 				"stylesheets/tuleap-vars.css",
 				"stylesheets/content//tuleap-theme.css",
 				"stylesheets/structure/fixed-header.css",
