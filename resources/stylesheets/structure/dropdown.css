@@ -74,12 +74,12 @@
 	padding: 4px 20px 2px 6px;
 }
 .mw-tlp-dropdown .mw-tlp-skin-btn::after{
-	content: "\f0d7";
+	content: "\e001";
 	position: absolute;
 	z-index: 1;
 	right: 8px;
 	transition: color 75ms;
 	opacity: .5;
-	font-family: "fontawesome";
+	font-family: "TuleapSkinIconsFont";
 	font-size: .625rem;
 }

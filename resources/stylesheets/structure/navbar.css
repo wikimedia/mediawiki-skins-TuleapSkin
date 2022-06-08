@@ -39,13 +39,13 @@ a.mw-tlp-skin-navbar-item {
 	text-decoration: none;
 }
 .mw-tlp-skin-navbar-item:after {
-	content: "\f0d7";
+	content: "\e001";
 	position: absolute;
 	z-index: 1;
 	right: 8px;
 	transition: color 75ms;
 	opacity: .5;
-	font-family: "fontawesome";
+	font-family: "TuleapSkinsIconFonts";
 	font-size: .625rem;
 }
 .navbar .mw-tlp-skin-btn-dropdown-menu {
