@@ -1,0 +1,1 @@
+tuleap-project-sidebar:not(:defined){display:block;width:250px;height:100vh;background:var(--tlp-dark-color)}tuleap-project-sidebar[collapsed]:not(:defined){width:50px}
