@@ -46,7 +46,7 @@
 				"stylesheets/structure/dropdown.css",
 				"stylesheets/content/oo-ui.css",
 				"stylesheets/content/toc.css",
-				"stylesheets/icons/fontawesome.css"
+				"stylesheets/icons/icons.css"
 			]
 		},
 		"skins.tuleap-sidebar": {
