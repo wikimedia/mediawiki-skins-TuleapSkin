@@ -28,8 +28,7 @@
 		}
 	},
 	"AutoloadNamespaces": {
-		"TuleapSkin\\": "src/",
-		"TuleapSkin\\Tests\\": "tests/phpunit"
+		"TuleapSkin\\": "src/"
 	},
 	"ResourceModules": {
 		"skins.tuleap.styles": {
