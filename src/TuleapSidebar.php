@@ -32,7 +32,10 @@ class TuleapSidebar {
 	 */
 	public function getStyles() {
 		$styles = $this->connection->getIntegrationData( $this->id, 'styles' );
-		return $styles[ 'content' ];
+		if ( is_array( $styles ) ) {
+			return $styles[ 'content' ];
+		}
+		return '';
 	}
 
 	/**
@@ -41,7 +44,10 @@ class TuleapSidebar {
 	 */
 	public function getConfiguration() {
 		$config = $this->connection->getIntegrationData( $this->id, 'project_sidebar' );
-		return $config[ 'config' ];
+		if ( is_array( $config ) ) {
+			return $config[ 'config' ];
+		}
+		return '';
 	}
 
 	/**
@@ -50,6 +56,9 @@ class TuleapSidebar {
 	 */
 	public function isCollapsed() {
 		$config = $this->connection->getIntegrationData( $this->id, 'project_sidebar' );
-		return $config[ 'is_collapsed' ];
+		if ( is_array( $config ) ) {
+			return $config[ 'is_collapsed' ];
+		}
+		return '';
 	}
 }
