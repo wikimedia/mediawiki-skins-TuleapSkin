@@ -31,6 +31,7 @@
 	padding: 0 10px 0 26px;
 	border-radius: 16px;
 	border: 1px solid var(--tlp-neutral-dark-color-darker-05);
+	/* @embed */
 	background: no-repeat 2% 50% url(../../images/search.svg);
 	background-color: var(--tlp-white-color);
 	font-size: .8125rem;
