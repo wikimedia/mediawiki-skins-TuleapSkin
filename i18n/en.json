@@ -1,4 +1,9 @@
 {
+	"@metadata": {
+		"authors": [
+			"Miriam Schlindwein"
+		]
+	},
 	"tuleapskin-desc": "Tuleap Skin",
 	"tlp-personal-menu-title": "Personal",
 	"tlp-main-menu-title": "MediaWiki",

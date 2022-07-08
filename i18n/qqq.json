@@ -1,6 +1,8 @@
 {
 	"@metadata": {
-		"authors": []
+		"authors": [
+			"Miriam Schlindwein"
+		]
 	},
 	"tuleapskin-desc": "Description of TuleapSkin for [[Special:Version]]",
 	"tlp-personal-menu-title": "Label of button for personal menu",
