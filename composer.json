@@ -2,7 +2,6 @@
 	"name": "mediawiki/tuleap-skin",
 	"type": "mediawiki-skin",
 	"license": "GPL-3.0-only",
-	"type": "mediawiki-skin",
 	"extra": {
 		"installer-name": "TuleapSkin"
 	},

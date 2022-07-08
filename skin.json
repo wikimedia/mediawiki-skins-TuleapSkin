@@ -20,7 +20,7 @@
 	},
 	"ValidSkinNames": {
 		"tuleap": {
-			"class":"TuleapSkin\\SkinTuleapSkin",
+			"class": "TuleapSkin\\SkinTuleapSkin",
 			"services": [
 				"TuleapConnection",
 				"MainConfig"

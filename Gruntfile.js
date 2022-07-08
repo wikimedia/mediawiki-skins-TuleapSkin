@@ -10,7 +10,6 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-banana-checker' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-eslint' );
-	grunt.loadNpmTasks( 'grunt-stylelint' );
 
 	grunt.initConfig( {
 		eslint: {
@@ -23,14 +22,6 @@ module.exports = function ( grunt ) {
 				'!{vendor,node_modules}/**'
 			]
 		},
-		stylelint: {
-			all: [
-				'**/*.{css,less}',
-				'!**/*.generated.css',
-				'!vendor/**',
-				'!node_modules/**'
-			]
-		},
 		banana: conf.MessagesDirs,
 		watch: {
 			files: [
@@ -41,6 +32,6 @@ module.exports = function ( grunt ) {
 		}
 	} );
 
-	grunt.registerTask( 'test', [ 'eslint', 'stylelint', 'banana' ] );
+	grunt.registerTask( 'test', [ 'eslint', 'banana' ] );
 	grunt.registerTask( 'default', 'test' );
 };
