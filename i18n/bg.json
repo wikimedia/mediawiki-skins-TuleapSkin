@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kareyac"
+			"Kareyac",
+			"StanProg"
 		]
 	},
 	"tlp-tools-menu-title": "Инструменти",
 	"tlp-actions-menu-title": "Действия",
-	"tlp-administration": "Администрация"
+	"tlp-administration": "Администриране"
 }
