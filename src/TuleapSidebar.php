@@ -59,6 +59,6 @@ class TuleapSidebar {
 		if ( is_array( $config ) ) {
 			return $config[ 'is_collapsed' ];
 		}
-		return '';
+		return false;
 	}
 }
