@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tr jason"
+		]
+	},
+	"tlp-personal-menu-title": "个人",
+	"tlp-tools-menu-title": "工具",
+	"tlp-actions-menu-title": "操作",
+	"tlp-administration": "管理"
+}
