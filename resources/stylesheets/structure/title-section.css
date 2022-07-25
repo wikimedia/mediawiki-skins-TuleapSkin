@@ -9,8 +9,6 @@
 	margin: 0 var(--tlp-small-spacing);
 }
 
-
-
 .title-section-actions {
 	display: flex;
 	flex: 1 1 auto;
@@ -32,8 +30,9 @@
 	border-radius: 16px;
 	border: 1px solid var(--tlp-neutral-dark-color-darker-05);
 	/* @embed */
-	background: no-repeat 2% 50% url(../../images/search.svg);
+	background: no-repeat url(../../images/search.svg);
 	background-color: var(--tlp-white-color);
+	background-position: 10px center;
 	font-size: .8125rem;
 	font-family: var(--tlp-font-family);
 }
@@ -42,6 +41,19 @@
 	border-color: var(--tlp-main-color);
 	box-shadow: var(--tlp-shadow-focus);
 	outline: 0;
+}
+
+#p-search input::-webkit-input-placeholder {
+	color: var(--tlp-neutral-dark-color-darker-10);
+}
+#p-search input::placeholder {
+	color: var(--tlp-neutral-dark-color-darker-10);
+}
+#p-search input:-moz-placeholder {
+	color: var(--tlp-neutral-dark-color-darker-10);
+}
+#p-search input:-ms-input-placeholder {
+	color: var(--tlp-neutral-dark-color-darker-10);
 }
 
 .title-section h1 {

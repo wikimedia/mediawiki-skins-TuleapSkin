@@ -1,0 +1,11 @@
+.ve-active #content {
+	padding-top: 0;
+}
+
+.ve-active .title-section-actions {
+	display: none;
+}
+
+.ve-active .ve-init-mw-desktopArticleTarget-toolbar-opened > .oo-ui-toolbar-bar {
+	padding-right: 200px;
+}

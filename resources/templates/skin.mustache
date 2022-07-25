@@ -8,7 +8,7 @@
 <div class="main-container">
 <div class="fixed-container">
 	<div class="mw-tlp-dropdown">
-	<button role="button" class="mw-tlp-fixed-btn">{{msg-tlp-personal-menu-title}}</button>
+	<button role="button" class="mw-tlp-fixed-btn mw-tlp-dropdown-btn">{{msg-tlp-personal-menu-text}}</button>
 	<div class="mw-tlp-skin-btn-dropdown-menu">
 		<ul>
 		{{{personal-tools}}}
@@ -20,41 +20,43 @@
 	<div class="row">
 		<nav>
 			<div class="mw-tlp-dropdown">
-				<a role="button" class="mw-tlp-skin-navbar-item" href="{{main-menu-href}}">{{msg-tlp-main-menu-title}}</a>
+				<div class="mw-tlp-dropdown-split-btn">
+					<a role="button" class="mw-tlp-skin-btn mw-tlp-skin-btn-secondary mw-tlp-dropdown-split-btn-main" href="{{main-menu-href}}">{{msg-tlp-main-menu-title}}</a>
+					<button role="button" class="mw-tlp-skin-btn mw-tlp-skin-btn-secondary mw-tlp-dropdown-split-btn-caret mw-tlp-dropdown-btn" ></button>
+				</div>
 				<div class="mw-tlp-skin-btn-dropdown-menu">
 					<ul>
-					{{#sidebar}}
-						<li><a id="{{id}}" href="{{href}}">{{text}}</a></li>
-					{{/sidebar}}
-					</ul>
-
+						{{#sidebar}}
+							<li><a id="{{id}}" href="{{href}}">{{text}}</a></li>
+						{{/sidebar}}
+						</ul>
 				</div>
 			</div>
 		</nav>
 	</div>
 </div>
 <div id="main-content" class="content">
-	<div id="content" class="mw-body-primary" role="main">
+	<div id="tlp-content" class="mw-body-primary" role="main">
 		<div class="title-section">
 			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">{{html-title}}</span></h1>
 			<div class="title-section-actions">
-				{{#editaction}}
-					<div class="title-section-spacer">
-						<button role="button" class="mw-tlp-skin-btn mw-tlp-skin-btn-primary" ><a id="{{id}}" href="{{href}}">{{text}}</a></button>
-					</div>
-				{{/editaction}}
 				<div class="mw-tlp-dropdown title-section-spacer">
-					<button role="button" class="mw-tlp-skin-btn mw-tlp-skin-btn-secondary ">{{msg-tlp-tools-menu-title}}</button>
+				<div class="mw-tlp-dropdown-split-btn">
+					{{#editaction}}
+						<a id="{{id}}" role="button" class="mw-tlp-skin-btn mw-tlp-skin-btn-primary mw-tlp-dropdown-split-btn-main" href="{{href}}">{{text}}</a>
+					{{/editaction}}
+					<button role="button" class="mw-tlp-skin-btn mw-tlp-skin-btn-primary mw-tlp-dropdown-split-btn-caret mw-tlp-dropdown-btn" ></button>
+				</div>
+				<div class="mw-tlp-skin-btn-dropdown-menu">
+					<ul>
+						{{{actions}}}
+					</ul>
+				</div>
+			</div>
+				<div class="mw-tlp-dropdown title-section-spacer">
+					<button role="button" class="mw-tlp-skin-btn mw-tlp-skin-btn-secondary mw-tlp-dropdown-btn mw-tlp-dropdown-marker">{{msg-tlp-tools-menu-title}}</button>
 					<div class="mw-tlp-skin-btn-dropdown-menu">
 						<ul>
-						<li class="mw-tlp-skin-dropdown-title">{{msg-tlp-actions-menu-title}}</li>
-						{{#actions}}
-								<li><a id="{{id}}" href="{{href}}">{{text}}</a></li>
-						{{/actions}}
-						</ul>
-						<ul>
-							<li class="mw-tlp-separator"></li>
-							<li class="mw-tlp-skin-dropdown-title">{{msg-tlp-tools-menu-title}}</li>
 							{{{toolbox}}}
 						</ul>
 					</div>
@@ -72,7 +74,7 @@
 			</div>
 		</div>
 
-		<div id="bodyContent" class="mw-body">
+		<div id="content" class="mw-body">
 			<div id="siteSub"></div>
 			<div id="contentSub">{{{html-subtitle}}}</div>
 			<div id="contentSub2">{{{html-undelete-link}}}</div>

@@ -10,6 +10,7 @@
 	padding: var(--tlp-medium-spacing) var(--tlp-medium-spacing) 0;
 	transition: padding ease-in-out .1s;
 }
+
 .fixed-container .mw-tlp-fixed-btn {
 	height: 40px;
 	margin: 0 0 0 var(--tlp-small-spacing);
@@ -41,4 +42,15 @@
 
 .mw-tlp-fixed-btn + .mw-tlp-skin-btn-dropdown-menu {
 	right: 0;
+}
+
+.fixed-container.ve-fixed-btn {
+	padding: 0 var( --tlp-medium-spacing );
+}
+
+.fixed-container.ve-fixed-btn .mw-tlp-fixed-btn {
+	height: 47px;
+	box-shadow: none;
+	border-radius: 0;
+	border-color: transparent;
 }

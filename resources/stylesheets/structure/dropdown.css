@@ -10,12 +10,14 @@
 	margin: 10px 0 0;
 	border-radius: var(--tlp-medium-radius);
 	background: var(--tlp-white-color);
-	box-shadow: var(--tlp-flyover-shadow);
+	display: block;
+	transform: opacity 75ms ease-out,transform 75ms ease-out,box-shadow 75ms ease-out;
 }
 
-.mw-tlp-skin-btn-dropdown-menu:hover {
+.mw-tlp-skin-btn-dropdown-menu.dropdown-shown {
 	visibility: visible;
 	pointer-events: auto;
+	box-shadow: var(--tlp-flyover-shadow);
 }
 .mw-tlp-skin-btn-dropdown-menu ul {
 	margin: 0;
@@ -54,10 +56,9 @@
 	display: inline-block;
 	position: relative;
 }
-
-.mw-tlp-dropdown:hover > .mw-tlp-skin-btn-dropdown-menu {
-	visibility: visible;
-	pointer-events: auto;
+.mw-tlp-dropdown-split-btn {
+	display: flex;
+	align-items: center;
 }
 
 .mw-tlp-skin-dropdown-title {
@@ -73,13 +74,29 @@
 .mw-tlp-dropdown .mw-tlp-skin-btn {
 	padding: 4px 20px 2px 6px;
 }
-.mw-tlp-dropdown .mw-tlp-skin-btn::after{
+.mw-tlp-skin-btn.mw-tlp-dropdown-marker::after{
 	content: "\e001";
 	position: absolute;
 	z-index: 1;
 	right: 8px;
 	transition: color 75ms;
-	opacity: .5;
 	font-family: "TuleapSkinsIconFonts";
 	font-size: .625rem;
+}
+
+.mw-tlp-dropdown-split-btn .mw-tlp-dropdown-split-btn-main {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	padding: 0 var(--tlp-medium-spacing);
+}
+
+.mw-tlp-dropdown-split-btn .mw-tlp-dropdown-split-btn-caret {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	padding: 0 var(--tlp-medium-spacing);
+}
+.mw-tlp-dropdown-split-btn .mw-tlp-dropdown-split-btn-caret::before {
+	content: "\e001";
+	font-family: "TuleapSkinsIconFonts";
+	font-size: .875rem;
 }
