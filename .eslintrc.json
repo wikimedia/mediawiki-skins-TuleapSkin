@@ -4,6 +4,11 @@
 		"wikimedia/client-es5",
 		"wikimedia/mediawiki"
 	],
+	"globals": {
+		"$": "readonly",
+		"jQuery": "readonly",
+		"mediaWiki": "readonly"
+	},
 	"rules": {
 		"space-before-blocks": "warn",
 		"space-before-function-paren": "warn",

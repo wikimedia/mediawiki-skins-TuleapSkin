@@ -32,6 +32,6 @@ body .content-container {
 	padding: var(--tlp-large-spacing) var(--tlp-medium-spacing);
 }
 
-#content {
+#tlp-content {
 	width: 100%;
 }

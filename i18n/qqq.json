@@ -5,7 +5,8 @@
 		]
 	},
 	"tuleapskin-desc": "Description of TuleapSkin for [[Special:Version]]",
-	"tlp-personal-menu-title": "Label of button for personal menu",
+	"tlp-personal-menu-title": "Title of button for personal menu",
+	"tlp-personal-menu-text": "Label of button for personal menu",
 	"tlp-main-menu-title": "Label of main navigation for mediawiki",
 	"tlp-tools-menu-title": "Label of button for tools menu",
 	"tlp-actions-menu-title": "Label of button for actions menu",

@@ -36,7 +36,7 @@
 				"stylesheets/main.css",
 				"lib/project-sidebar.css",
 				"stylesheets/tuleap-vars.css",
-				"stylesheets/content//tuleap-theme.css",
+				"stylesheets/content/tuleap-theme.css",
 				"stylesheets/structure/fixed-header.css",
 				"stylesheets/structure/navbar.css",
 				"stylesheets/structure/structure.css",
@@ -45,6 +45,7 @@
 				"stylesheets/structure/dropdown.css",
 				"stylesheets/content/oo-ui.css",
 				"stylesheets/content/toc.css",
+				"stylesheets/content/ve.css",
 				"stylesheets/icons/icons.css"
 			]
 		},
@@ -53,6 +54,12 @@
 			"packageFiles": [
 				"lib/project-sidebar.umd.js"
 			]
+		},
+		"skins.tuleap.scripts": {
+			"scripts": [
+				"js/Dropdown.js",
+				"js/VE-Toolbar.js"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
@@ -60,6 +67,18 @@
 		"remoteSkinPath": "TuleapSkin/resources"
 	},
 	"Hooks": {
+	},
+	"config": {
+		"TuleapSkinEditActions": {
+			"value": [
+				"talk", "history", "info", "permalink", "whatlinkshere", "-", "protect", "watch", "move", "delete", "-", "pdfbook", "print"
+			]
+		},
+		"TuleapSkinToolActions": {
+			"value": [
+				"recentchangeslinked", "-", "upload", "specialpages", "-", "*"
+			]
+		}
 	},
 	"load_composer_autoloader": true,
 	"manifest_version": 2
