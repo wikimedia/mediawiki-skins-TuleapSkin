@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"আজিজ",
 			"আফতাবুজ্জামান"
 		]
 	},
 	"tuleapskin-desc": "টুলিপ আবরণ",
 	"tlp-personal-menu-title": "ব্যক্তিগত",
+	"tlp-personal-menu-text": "মিডিয়াউইকি অ্যাকাউন্ট",
 	"tlp-tools-menu-title": "সরঞ্জাম",
 	"tlp-actions-menu-title": "কার্য",
 	"tlp-administration": "প্রশাসন"
