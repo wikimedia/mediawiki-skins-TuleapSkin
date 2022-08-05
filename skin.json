@@ -14,7 +14,7 @@
 			"TuleapIntegration": "*"
 		}
 	},
-	"callback": "mwsInitComponents",
+	"callback": "TuleapSkin\\Setup::onCallback",
 	"MessagesDirs": {
 		"TuleapSkin": "i18n"
 	},
