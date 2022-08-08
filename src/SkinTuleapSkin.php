@@ -146,17 +146,20 @@ class SkinTuleapSkin extends SkinMustache {
 	 */
 	private function getEditAction() {
 		$action = [];
-		if ( isset( $this->content_navigation[ 'views' ][ 've-edit' ] ) ) {
-			$action = $this->content_navigation[ 'views' ][ 've-edit' ];
-			unset( $this->content_navigation[ 'views' ][ 've-edit' ] );
-			return $action;
+
+		$veNamespace = $this->getConfig()->get( 'VisualEditorAvailableNamespaces' ) ?? [];
+		$ns = $this->getTitle()->getNamespace();
+		if ( isset( $veNamespace[$ns] ) && $veNamespace[$ns] ) {
+			if ( isset( $this->content_navigation[ 'views' ][ 've-edit' ] ) ) {
+				$action = $this->content_navigation[ 'views' ][ 've-edit' ];
+				$action['id'] = "ca-edit";
+				return $action;
+			}
 		}
 		if ( isset( $this->content_navigation[ 'views' ][ 'edit' ] ) ) {
 			$action = $this->content_navigation[ 'views' ][ 'edit' ];
-			unset( $this->content_navigation[ 'views' ][ 'edit' ] );
 			return $action;
 		}
-
 		return $action;
 	}
 
