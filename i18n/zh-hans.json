@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Tr jason"
+			"Tr jason",
+			"Lakejason0"
 		]
 	},
+	"tuleapskin-desc": "Tuleap皮肤",
 	"tlp-personal-menu-title": "个人",
 	"tlp-tools-menu-title": "工具",
 	"tlp-actions-menu-title": "操作",

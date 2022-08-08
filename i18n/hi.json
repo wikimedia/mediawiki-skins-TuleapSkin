@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Abijeet Patro",
-			"AnupamM"
+			"AnupamM",
+			"Saurmandal"
 		]
 	},
 	"tlp-personal-menu-title": "निजी",
+	"tlp-personal-menu-text": "मीडियाविकि खाता",
 	"tlp-tools-menu-title": "उपकरण",
 	"tlp-actions-menu-title": "क्रियाएँ",
 	"tlp-administration": "प्रबंधन"
