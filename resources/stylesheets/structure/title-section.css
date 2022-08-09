@@ -12,7 +12,12 @@
 .title-section-actions {
 	display: flex;
 	flex: 1 1 auto;
+	flex-wrap: wrap;
 	align-items: center;
+	margin-top: var(--tlp-small-spacing);
+}
+.title-section-actions > * {
+	margin-top: var(--tlp-small-spacing);
 }
 
 .mw-tlp-search {
