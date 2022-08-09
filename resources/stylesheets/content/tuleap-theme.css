@@ -20,10 +20,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1#firstHeading.firstHeading {
 	font-family: var(--tlp-font-family);
-	margin: 0 var(--tlp-medium-spacing) 0 0;
+	margin: var(--tlp-small-spacing) var(--tlp-medium-spacing) 0 0;
 	font-size: 36px;
 	font-weight: 600;
-	line-height: 40px;
+	line-height: 50px;
 	border-bottom: none;
 	width: auto;
 }
