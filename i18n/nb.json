@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"tuleapskin-desc": "Tuleap-drakta",
+	"tlp-personal-menu-title": "Personlig",
+	"tlp-personal-menu-text": "MediaWiki-konto",
+	"tlp-tools-menu-title": "Verktøy",
+	"tlp-actions-menu-title": "Handlinger",
+	"tlp-administration": "Administrasjon"
+}
