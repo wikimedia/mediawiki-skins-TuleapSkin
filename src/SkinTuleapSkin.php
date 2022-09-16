@@ -81,8 +81,7 @@ class SkinTuleapSkin extends SkinMustache {
 		// Enable responsive behaviour on mobile browsers
 		$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
 
-		// Use mediawiki interface
-		$out->addModuleStyles( 'mediawiki.skinning.interface' );
+		$out->addModuleStyles( 'skins.tuleap.mw.interface.styles' );
 
 		// Add only ResourceModules for active layout and used structures
 		$out->addModuleStyles( 'skins.tuleap.styles' );
