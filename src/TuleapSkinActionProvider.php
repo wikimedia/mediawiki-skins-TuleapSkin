@@ -29,7 +29,8 @@ class TuleapSkinActionProvider {
 				$separator = false;
 				foreach ( $this->actions as $actionKey => $action ) {
 					if ( $actionKey !== 'main' && $actionKey !== 'view' &&
-						$actionKey !== 've-edit' && $actionKey !== 'edit' ) {
+						$actionKey !== 've-edit' && $actionKey !== 'edit' &&
+						$actionKey !== 'specialpages' && $actionKey !== 'unwatch' && $actionKey !== 'watch' ) {
 						if ( !$separator ) {
 							$lastKey = array_key_last( $links );
 							if ( strpos( $lastKey, 'separator-' ) === false ) {
@@ -75,6 +76,20 @@ class TuleapSkinActionProvider {
 			}
 		}
 
+		return $links;
+	}
+
+	/**
+	 * @param array $links
+	 * @param array $excludeLinks
+	 * @return array
+	 */
+	public function excludeLinks( $links, $excludeLinks ) {
+		foreach ( $excludeLinks as $key ) {
+			if ( isset( $links[ $key ] ) ) {
+				unset( $links[ $key ] );
+			}
+		}
 		return $links;
 	}
 }
