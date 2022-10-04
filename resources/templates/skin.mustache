@@ -19,7 +19,7 @@
 <div class="navbar">
 	<div class="row">
 		<nav>
-			<div class="mw-tlp-dropdown">
+			<div class="mw-tlp-dropdown mw-tlp-breadcrumb">
 				<div class="mw-tlp-dropdown-split-btn">
 					<a role="button" class="mw-tlp-skin-btn mw-tlp-skin-btn-secondary mw-tlp-dropdown-split-btn-main" href="{{main-menu-href}}">{{msg-tlp-main-menu-title}}</a>
 					<button role="button" class="mw-tlp-skin-btn mw-tlp-skin-btn-secondary mw-tlp-dropdown-split-btn-caret mw-tlp-dropdown-btn" ></button>
@@ -45,7 +45,7 @@
 					{{#editaction}}
 						<a id="{{id}}" role="button" class="mw-tlp-skin-btn mw-tlp-skin-btn-primary mw-tlp-dropdown-split-btn-main" href="{{href}}">{{text}}</a>
 					{{/editaction}}
-					<button role="button" class="mw-tlp-skin-btn mw-tlp-skin-btn-primary mw-tlp-dropdown-split-btn-caret mw-tlp-dropdown-btn" ></button>
+					<button role="button" class="mw-tlp-skin-btn mw-tlp-skin-btn-primary mw-tlp-dropdown-split-btn-caret mw-tlp-dropdown-btn {{#action-class}}{{.}}{{/action-class}}" ></button>
 				</div>
 				<div class="mw-tlp-skin-btn-dropdown-menu">
 					<ul>
@@ -54,7 +54,7 @@
 				</div>
 			</div>
 				<div class="mw-tlp-dropdown title-section-spacer">
-					<button role="button" class="mw-tlp-skin-btn mw-tlp-skin-btn-secondary mw-tlp-dropdown-btn mw-tlp-dropdown-marker">{{msg-tlp-tools-menu-title}}</button>
+					<button role="button" class="mw-tlp-skin-btn mw-tlp-skin-btn-secondary mw-tlp-dropdown-btn mw-tlp-dropdown-marker {{#tools-class}}{{.}}{{/tools-class}}">{{msg-tlp-tools-menu-title}}</button>
 					<div class="mw-tlp-skin-btn-dropdown-menu">
 						<ul>
 							{{{toolbox}}}

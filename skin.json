@@ -23,7 +23,8 @@
 			"class": "TuleapSkin\\SkinTuleapSkin",
 			"services": [
 				"TuleapConnection",
-				"MainConfig"
+				"MainConfig",
+				"PermissionManager"
 			]
 		}
 	},
@@ -32,22 +33,23 @@
 	},
 	"ResourceModules": {
 		"skins.tuleap.styles": {
-			"styles": [
-				"stylesheets/main.css",
-				"lib/project-sidebar.css",
-				"stylesheets/tuleap-vars.css",
-				"stylesheets/content/tuleap-theme.css",
-				"stylesheets/structure/fixed-header.css",
-				"stylesheets/structure/navbar.css",
-				"stylesheets/structure/structure.css",
-				"stylesheets/structure/title-section.css",
-				"stylesheets/structure/buttons.css",
-				"stylesheets/structure/dropdown.css",
-				"stylesheets/content/oo-ui.css",
-				"stylesheets/content/toc.css",
-				"stylesheets/content/ve.css",
-				"stylesheets/icons/icons.css"
-			]
+			"styles": {
+				"stylesheets/main.css": {},
+				"lib/project-sidebar.css": {},
+				"stylesheets/tuleap-vars.css": {},
+				"stylesheets/content/tuleap-theme.css": {},
+				"stylesheets/structure/fixed-header.css": {},
+				"stylesheets/structure/navbar.css": {},
+				"stylesheets/structure/structure.css": {},
+				"stylesheets/structure/title-section.css": {},
+				"stylesheets/structure/buttons.css": {},
+				"stylesheets/structure/dropdown.css": {},
+				"stylesheets/content/oo-ui.css": {},
+				"stylesheets/content/toc.css": {},
+				"stylesheets/content/ve.css": {},
+				"stylesheets/icons/icons.css": {},
+				"stylesheets/tlp.print.css": { "media": "print" }
+			}
 		},
 		"skins.tuleap-sidebar": {
 			"class": "MWStake\\MediaWiki\\Component\\ThirdPartyResources\\ResourceLoader\\DistFiles",
@@ -76,7 +78,12 @@
 		},
 		"TuleapSkinToolActions": {
 			"value": [
-				"recentchangeslinked", "-", "upload", "specialpages", "-", "*"
+				"recentchangeslinked", "-", "upload", "-", "*"
+			]
+		},
+		"TuleapSkinUserProfileExlude": {
+			"value": [
+				"userpage", "mytalk", "watchlist"
 			]
 		}
 	},
