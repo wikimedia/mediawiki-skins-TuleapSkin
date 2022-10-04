@@ -1,0 +1,16 @@
+tuleap-project-sidebar {
+	display: none;
+}
+.fixed-container {
+	display: none;
+}
+.navbar {
+	display: none;
+}
+.title-section-actions {
+	display: none;
+}
+.main-container {
+	max-width: calc( 100vw - 50px);
+	width: 100%;
+}

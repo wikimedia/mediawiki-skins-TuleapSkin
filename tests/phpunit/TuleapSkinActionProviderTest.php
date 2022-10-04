@@ -119,7 +119,7 @@ class TuleapSkinActionProviderTest extends MediaWikiIntegrationTestCase {
 			],
 			'multiple-actions-with-star' => [
 				[
-					"recentchangeslinked", "-", "upload", "specialpages", "-", "*"
+					"recentchangeslinked", "-", "upload", "-", "*"
 				],
 				$links,
 				[
@@ -128,11 +128,6 @@ class TuleapSkinActionProviderTest extends MediaWikiIntegrationTestCase {
 						"id" => "t-recentchangeslinked"
 					],
 					'separator-1' => 'separator',
-					'specialpages' => [
-						"text" => "Printable version",
-						"id" => "t-print"
-					],
-					'separator-3' => 'separator',
 					'talk' => [
 						"text" => "Discussion",
 						"id" => "ca-talk"
@@ -160,10 +155,6 @@ class TuleapSkinActionProviderTest extends MediaWikiIntegrationTestCase {
 					'protect' => [
 						"text" => "Protect",
 						"id" => "ca-protect"
-					],
-					'watch' => [
-						"text" => "Watch",
-						"id" => "ca-watch"
 					],
 					'whatlinkshere' => [
 						"text" => "Links",

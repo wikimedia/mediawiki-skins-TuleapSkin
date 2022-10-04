@@ -20,3 +20,18 @@
 	margin: var(--tlp-small-spacing) 0;
 	border-top: 1px solid var(--tlp-neutral-light-color);
 }
+
+.mw-tlp-breadcrumb .mw-tlp-skin-btn-secondary {
+	font-weight: 600;
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	border-color: transparent;
+	box-shadow: none;
+}
+.mw-tlp-breadcrumb .mw-tlp-dropdown-split-btn .mw-tlp-dropdown-split-btn-main{
+	padding: 0;
+}
+.mw-tlp-breadcrumb .mw-tlp-dropdown-split-btn .mw-tlp-dropdown-split-btn-caret {
+	padding: 0 var(--tlp-small-spacing);
+}

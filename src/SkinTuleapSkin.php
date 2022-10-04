@@ -3,6 +3,7 @@
 namespace TuleapSkin;
 
 use Html;
+use MediaWiki\Permissions\PermissionManager;
 use OutputPage;
 use SkinMustache;
 use Title;
@@ -54,16 +55,19 @@ class SkinTuleapSkin extends SkinMustache {
 	/**
 	 * @param TuleapConnection $tuleapConnection
 	 * @param Config $config
+	 * @param PermissionManager $permissionManager
 	 * @param array|null $options
 	 */
-	public function __construct( $tuleapConnection, $config, $options = null ) {
+	public function __construct( $tuleapConnection, $config, $permissionManager, $options = null ) {
 		parent::__construct( $options );
 		$this->options['templateDirectory'] = dirname( __DIR__ ) . "/resources/templates/";
 
 		$id = $config->get( 'TuleapProjectId' );
 		$this->configActions = $config->get( 'TuleapSkinEditActions' );
 		$this->configTools = $config->get( 'TuleapSkinToolActions' );
+		$this->configPersonalExlude = $config->get( 'TuleapSkinUserProfileExlude' );
 		$this->tuleapSidebar = new TuleapSidebar( $tuleapConnection, $id );
+		$this->permissionManager = $permissionManager;
 	}
 
 	/**
@@ -122,7 +126,7 @@ class SkinTuleapSkin extends SkinMustache {
 			'actions' => $this->buildPrimaryActionUrls(),
 			'toolbox' => $this->getActionTools(),
 			'languages' => $this->buildSidebar()[ 'LANGUAGES' ],
-			'personal-tools' => $this->makePersonalToolsList(),
+			'personal-tools' => $this->getPersonalList(),
 			'tuleap-project-sidebar-config' => $this->makeTuleapProjectSidebarConfig(),
 			'msg-tlp-personal-menu-title' => $this->getSkin()->msg( 'tlp-personal-menu-title' )->text(),
 			'msg-tlp-personal-menu-text' => $this->getSkin()->msg( 'tlp-personal-menu-text' ),
@@ -132,8 +136,20 @@ class SkinTuleapSkin extends SkinMustache {
 			'main-menu-href' => $mainpage->getLocalURL()
 		] );
 
+		if ( empty( $skinData['actions'] ) ) {
+			$skinData = array_merge( $skinData, [
+				'action-class' => 'hidden'
+			] );
+		}
+
+		if ( empty( $skinData['toolbox'] ) ) {
+			$skinData = array_merge( $skinData, [
+				'tools-class' => 'hidden'
+			] );
+		}
+
 		if ( $this->tuleapSidebar->isCollapsed() ) {
-			$skinData = array_push( $skinData, [
+			$skinData = array_merge( $skinData, [
 				'tuleap-project-sidebar-collapsed' => $this->tuleapSidebar->isCollapsed()
 			] );
 		}
@@ -167,6 +183,11 @@ class SkinTuleapSkin extends SkinMustache {
 	 * @return string
 	 */
 	private function buildPrimaryActionUrls() {
+		$user = $this->getUser();
+		$title = $this->getTitle();
+		if ( !$this->permissionManager->userCan( 'read', $user, $title ) ) {
+			return '';
+		}
 		$content_actions = $this->actionProvider->getLinks( $this->configActions );
 		$html = '';
 		foreach ( $content_actions as $key => $item ) {
@@ -189,6 +210,7 @@ class SkinTuleapSkin extends SkinMustache {
 		}
 
 		$toolbox = $this->buildSidebar()[ 'TOOLBOX' ];
+
 		$this->actions = array_merge( $this->actions, $toolbox );
 	}
 
@@ -204,6 +226,11 @@ class SkinTuleapSkin extends SkinMustache {
 	 * @return string
 	 */
 	private function getActionTools() {
+		$user = $this->getUser();
+		$title = $this->getTitle();
+		if ( !$this->permissionManager->userCan( 'read', $user, $title ) ) {
+			return '';
+		}
 		$content_tools = $this->actionProvider->getLinks( $this->configTools );
 		$html = '';
 		foreach ( $content_tools as $key => $item ) {
@@ -213,6 +240,22 @@ class SkinTuleapSkin extends SkinMustache {
 				] );
 				continue;
 			}
+			$html .= $this->makeListItem( $key, $item );
+		}
+		return $html;
+	}
+
+	/**
+	 *
+	 * @return string
+	 */
+	private function getPersonalList() {
+		$personalTools = $this->getPersonalToolsForMakeListItem(
+			$this->buildPersonalUrls()
+		);
+		$personalTools = $this->actionProvider->excludeLinks( $personalTools, $this->configPersonalExlude );
+		$html = '';
+		foreach ( $personalTools as $key => $item ) {
 			$html .= $this->makeListItem( $key, $item );
 		}
 		return $html;

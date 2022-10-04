@@ -7,5 +7,24 @@
 }
 
 .ve-active .ve-init-mw-desktopArticleTarget-toolbar-opened > .oo-ui-toolbar-bar {
+	border: 0;
+	box-shadow: var(--tlp-sticky-header-shadow);
+}
+
+.ve-active .ve-init-mw-desktopArticleTarget-toolbar-opened.ve-ui-toolbar-floating > .oo-ui-toolbar-bar {
 	padding-right: 200px;
+}
+
+body.mediawiki.skin-tuleap .ve-ui-toolbar-group-save.oo-ui-widget-disabled .ve-ui-toolbar-saveButton {
+	border-color: transparent;
+	background: var(--tlp-main-color-lighter-30);
+	color: var(--tlp-white-color-transparent-40);
+}
+
+.ve-active .mw-body {
+	padding-left: 0;
+}
+
+.ve-active .ve-init-mw-desktopArticleTarget-originalContent {
+	padding-left: var(--tlp-medium-spacing);
 }
