@@ -2,10 +2,10 @@
 	"root": true,
 	"extends": [
 		"wikimedia/client-es5",
-		"wikimedia/mediawiki"
+		"wikimedia/mediawiki",
+		"wikimedia/jquery"
 	],
 	"globals": {
-		"$": "readonly",
 		"jQuery": "readonly",
 		"mediaWiki": "readonly"
 	},
