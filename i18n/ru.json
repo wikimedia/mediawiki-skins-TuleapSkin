@@ -3,10 +3,12 @@
 		"authors": [
 			"Gulka.nik",
 			"Kareyac",
-			"Okras"
+			"Okras",
+			"Артём 13327"
 		]
 	},
 	"tlp-personal-menu-title": "Личное",
+	"tlp-personal-menu-text": "Аккаунт MediaWiki",
 	"tlp-tools-menu-title": "Инструменты",
 	"tlp-actions-menu-title": "Действия",
 	"tlp-administration": "Администрация"
