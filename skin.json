@@ -18,6 +18,9 @@
 	"MessagesDirs": {
 		"TuleapSkin": "i18n"
 	},
+	"AutoloadClasses": {
+		"AddMainpage": "maintenance/AddMainpage.php"
+	},
 	"ValidSkinNames": {
 		"tuleap": {
 			"class": "TuleapSkin\\SkinTuleapSkin",
@@ -64,7 +67,8 @@
 				"stylesheets/content/toc.css": {},
 				"stylesheets/content/ve.css": {},
 				"stylesheets/icons/icons.css": {},
-				"stylesheets/tlp.print.css": { "media": "print" }
+				"stylesheets/tlp.print.css": { "media": "print" },
+				"stylesheets/content/mainpage.css": {}
 			}
 		},
 		"skins.tuleap-sidebar": {
@@ -85,6 +89,12 @@
 		"remoteSkinPath": "TuleapSkin/resources"
 	},
 	"Hooks": {
+		"LoadExtensionSchemaUpdates": "applyMainpage"
+	},
+	"HookHandlers": {
+		"applyMainpage": {
+			"class": "TuleapSkin\\Hook\\ApplyMainpage"
+		}
 	},
 	"config": {
 		"TuleapSkinEditActions": {
