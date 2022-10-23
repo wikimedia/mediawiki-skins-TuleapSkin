@@ -2,6 +2,8 @@
 
 require_once dirname( dirname( dirname( __DIR__ ) ) ) . '/maintenance/Maintenance.php';
 
+use MediaWiki\MediaWikiServices;
+
 class AddMainpage extends LoggedUpdateMaintenance {
 
 	public function __construct() {
@@ -26,14 +28,25 @@ class AddMainpage extends LoggedUpdateMaintenance {
 			);
 			$content = new WikitextContent( $processedContent );
 
-			$page = WikiPage::factory( $title );
-			$status = $page->doEditContent(
-				$content,
-				'',
-				EDIT_MINOR,
-				false,
-				User::newSystemUser( 'Tuleap default' )
-			);
+			if ( method_exists( MediaWikiServices::class, 'getWikiPageFactory' ) ) {
+				// MW 1.36+
+				$page = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $title );
+				$status = $page->doUserEditContent(
+					$content,
+					User::newSystemUser( 'Tuleap default' ),
+					'',
+					EDIT_MINOR
+				);
+			} else {
+				$page = WikiPage::factory( $title );
+				$status = $page->doEditContent(
+					$content,
+					'',
+					EDIT_MINOR,
+					false,
+					User::newSystemUser( 'Tuleap default' )
+				);
+			}
 			$this->output( "TuleapSkin - mainpage set done... \n" );
 		} catch ( Exception $e ) {
 			$this->output( "TuleapSkin - could not set mainpage... \n" );
