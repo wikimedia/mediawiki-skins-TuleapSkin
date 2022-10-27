@@ -18,9 +18,6 @@
 	"MessagesDirs": {
 		"TuleapSkin": "i18n"
 	},
-	"AutoloadClasses": {
-		"AddMainpage": "maintenance/AddMainpage.php"
-	},
 	"ValidSkinNames": {
 		"tuleap": {
 			"class": "TuleapSkin\\SkinTuleapSkin",
@@ -71,14 +68,6 @@
 	"ResourceFileModulePaths": {
 		"localBasePath": "resources",
 		"remoteSkinPath": "TuleapSkin/resources"
-	},
-	"Hooks": {
-		"LoadExtensionSchemaUpdates": "applyMainpage"
-	},
-	"HookHandlers": {
-		"applyMainpage": {
-			"class": "TuleapSkin\\Hook\\ApplyMainpage"
-		}
 	},
 	"config": {
 		"TuleapSkinEditActions": {
