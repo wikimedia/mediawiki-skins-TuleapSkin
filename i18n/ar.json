@@ -1,9 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
+			"Meno25",
 			"محمد أحمد عبد الفتاح"
 		]
 	},
+	"tuleapskin-desc": "توليب سكين",
+	"tlp-personal-menu-title": "شخصي",
+	"tlp-personal-menu-text": "حساب ميدياويكي",
 	"tlp-tools-menu-title": "أدوات",
+	"tlp-actions-menu-title": "أفعال",
 	"tlp-administration": "إدارة"
 }
