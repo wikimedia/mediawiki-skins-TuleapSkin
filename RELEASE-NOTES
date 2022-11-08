@@ -1,0 +1,7 @@
+= TuleapSkin 1.0.1 =
+
+This is a security and maintenance release of the TuleapWikiFarm 1.0 branch.
+
+=== Changes since TuleapWikiFarm 1.0.0 ===
+* Localisation updates.
+* (Tuleap#28297) Remove automated "Main_Page" override on update
