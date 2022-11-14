@@ -5,10 +5,11 @@
 			"محمد أحمد عبد الفتاح"
 		]
 	},
-	"tlp-tools-menu-title": "أدوات",
-	"tlp-administration": "إدارة",
 	"tuleapskin-desc": "توليب سكين",
 	"tlp-personal-menu-title": "شخصي",
 	"tlp-personal-menu-text": "حساب ميدياويكي",
-	"tlp-actions-menu-title": "أفعال"
+	"tlp-main-menu-title": "ميدياويكي",
+	"tlp-tools-menu-title": "أدوات",
+	"tlp-actions-menu-title": "أفعال",
+	"tlp-administration": "إدارة"
 }
