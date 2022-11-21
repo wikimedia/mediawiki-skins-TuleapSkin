@@ -22,7 +22,6 @@
 		"tuleap": {
 			"class": "TuleapSkin\\SkinTuleapSkin",
 			"services": [
-				"TuleapConnection",
 				"MainConfig",
 				"PermissionManager"
 			]

@@ -2,7 +2,9 @@
 
 namespace TuleapSkin;
 
+use Config;
 use Html;
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
 use OutputPage;
 use SkinMustache;
@@ -46,27 +48,36 @@ class SkinTuleapSkin extends SkinMustache {
 	 */
 	private $actions = [];
 
+	/** @var string */
+	private $projectId;
+
 	/**
 	 *
 	 * @var TuleapSkinActionProvider
 	 */
 	private $actionProvider = null;
+	/**
+	 * @var mixed
+	 */
+	private $configPersonalExclude;
+	/**
+	 * @var PermissionManager
+	 */
+	private $permissionManager;
 
 	/**
-	 * @param TuleapConnection $tuleapConnection
 	 * @param Config $config
 	 * @param PermissionManager $permissionManager
 	 * @param array|null $options
 	 */
-	public function __construct( $tuleapConnection, $config, $permissionManager, $options = null ) {
+	public function __construct( $config, $permissionManager, $options = null ) {
 		parent::__construct( $options );
 		$this->options['templateDirectory'] = dirname( __DIR__ ) . "/resources/templates/";
 
-		$id = $config->get( 'TuleapProjectId' );
+		$this->projectId = $config->get( 'TuleapProjectId' );
 		$this->configActions = $config->get( 'TuleapSkinEditActions' );
 		$this->configTools = $config->get( 'TuleapSkinToolActions' );
-		$this->configPersonalExlude = $config->get( 'TuleapSkinUserProfileExlude' );
-		$this->tuleapSidebar = new TuleapSidebar( $tuleapConnection, $id );
+		$this->configPersonalExclude = $config->get( 'TuleapSkinUserProfileExlude' );
 		$this->permissionManager = $permissionManager;
 	}
 
@@ -89,7 +100,7 @@ class SkinTuleapSkin extends SkinMustache {
 		$out->addModules( 'skins.tuleap.scripts' );
 
 		// Add styles from user
-		$styles = $this->tuleapSidebar->getStyles();
+		$styles = $this->getTuleapSidebar()->getStyles();
 		$out->addInlineStyle( $styles );
 	}
 
@@ -147,9 +158,9 @@ class SkinTuleapSkin extends SkinMustache {
 			] );
 		}
 
-		if ( $this->tuleapSidebar->isCollapsed() ) {
+		if ( $this->getTuleapSidebar()->isCollapsed() ) {
 			$skinData = array_merge( $skinData, [
-				'tuleap-project-sidebar-collapsed' => $this->tuleapSidebar->isCollapsed()
+				'tuleap-project-sidebar-collapsed' => $this->getTuleapSidebar()->isCollapsed()
 			] );
 		}
 
@@ -217,7 +228,7 @@ class SkinTuleapSkin extends SkinMustache {
 	 * @return string
 	 */
 	private function makeTuleapProjectSidebarConfig() {
-		return $this->tuleapSidebar->getConfiguration();
+		return $this->getTuleapSidebar()->getConfiguration();
 	}
 
 	/**
@@ -252,12 +263,24 @@ class SkinTuleapSkin extends SkinMustache {
 		$personalTools = $this->getPersonalToolsForMakeListItem(
 			$this->buildPersonalUrls()
 		);
-		$personalTools = $this->actionProvider->excludeLinks( $personalTools, $this->configPersonalExlude );
+		$personalTools = $this->actionProvider->excludeLinks( $personalTools, $this->configPersonalExclude );
 		$html = '';
 		foreach ( $personalTools as $key => $item ) {
 			$html .= $this->makeListItem( $key, $item );
 		}
 		return $html;
+	}
+
+	/**
+	 * @return TuleapSidebar
+	 */
+	private function getTuleapSidebar(): TuleapSidebar {
+		if ( $this->tuleapSidebar === null ) {
+			// We cannot inject this service, because it is too early to initialize it when Skin is initialized
+			$connection = MediaWikiServices::getInstance()->getService( 'TuleapConnection' );
+			$this->tuleapSidebar = new TuleapSidebar( $connection, $this->projectId );
+		}
+		return $this->tuleapSidebar;
 	}
 
 }
