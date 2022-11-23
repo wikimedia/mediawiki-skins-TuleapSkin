@@ -8,7 +8,7 @@
 <div class="main-container">
 <div class="fixed-container">
 	<div class="mw-tlp-dropdown">
-	<button role="button" class="mw-tlp-fixed-btn mw-tlp-dropdown-btn">{{msg-tlp-personal-menu-text}}</button>
+	<button role="button" class="mw-tlp-fixed-btn mw-tlp-dropdown-btn {{#personal-class}}{{.}}{{/personal-class}}">{{msg-tlp-personal-menu-text}}</button>
 	<div class="mw-tlp-skin-btn-dropdown-menu">
 		<ul>
 		{{{personal-tools}}}
@@ -19,7 +19,7 @@
 <div class="navbar">
 	<div class="row">
 		<nav>
-			<div class="mw-tlp-dropdown mw-tlp-breadcrumb">
+			<div class="mw-tlp-dropdown mw-tlp-breadcrumb {{#breadcrumb-class}}{{.}}{{/breadcrumb-class}}">
 				<div class="mw-tlp-dropdown-split-btn">
 					<a role="button" class="mw-tlp-skin-btn mw-tlp-skin-btn-secondary mw-tlp-dropdown-split-btn-main" href="{{main-menu-href}}">{{msg-tlp-main-menu-title}}</a>
 					<button role="button" class="mw-tlp-skin-btn mw-tlp-skin-btn-secondary mw-tlp-dropdown-split-btn-caret mw-tlp-dropdown-btn" ></button>
@@ -64,7 +64,7 @@
 
 				<div class="title-section-actions-spacer"></div>
 				{{#data-search-box}}
-				<div class="mw-tlp-search">
+				<div class="mw-tlp-search {{#mw-tlp-search-class}}{{.}}{{/mw-tlp-search-class}}">
 					<form action="{{form-action}}" role="search" class="mw-portlet" id="p-search">
 						<input type="hidden" name="title" value="{{page-title}}">
 						{{{html-input}}}
