@@ -19,7 +19,8 @@ module.exports = function ( grunt ) {
 			},
 			all: [
 				'**/*.{js,json}',
-				'!{vendor,node_modules}/**'
+				'!{vendor,node_modules}/**',
+				'!resources/lib/project-sidebar.umd.js'
 			]
 		},
 		banana: conf.MessagesDirs,
