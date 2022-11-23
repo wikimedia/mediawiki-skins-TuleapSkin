@@ -5,6 +5,7 @@ This is a security and maintenance release of the TuleapSkin 1.0 branch.
 === Changes since TuleapSkin 1.0.1 ===
 * Localisation updates.
 * (Tuleap#29622) Fix pre-mature initialization of API connection
+* (Tuleap#28278) Fix displayed links on permission denied
 
 = TuleapSkin 1.0.1 =
 

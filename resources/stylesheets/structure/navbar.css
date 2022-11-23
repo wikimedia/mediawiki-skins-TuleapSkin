@@ -35,3 +35,6 @@
 .mw-tlp-breadcrumb .mw-tlp-dropdown-split-btn .mw-tlp-dropdown-split-btn-caret {
 	padding: 0 var(--tlp-small-spacing);
 }
+.mw-tlp-breadcrumb.hidden{
+	display: none;
+}

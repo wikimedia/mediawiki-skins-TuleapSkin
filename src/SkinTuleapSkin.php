@@ -144,7 +144,10 @@ class SkinTuleapSkin extends SkinMustache {
 			'msg-tlp-main-menu-title' => $this->getSkin()->msg( 'tlp-main-menu-title' )->text(),
 			'msg-tlp-actions-menu-title' => $this->getSkin()->msg( 'tlp-actions-menu-title' )->text(),
 			'msg-tlp-tools-menu-title' => $this->getSkin()->msg( 'tlp-tools-menu-title' )->text(),
-			'main-menu-href' => $mainpage->getLocalURL()
+			'main-menu-href' => $mainpage->getLocalURL(),
+			'personal-class' => $this->getClassForForbiddenAccess(),
+			'mw-tlp-search-class' => $this->getClassForForbiddenAccess(),
+			'breadcrumb-class' => $this->getClassForForbiddenAccess()
 		] );
 
 		if ( empty( $skinData['actions'] ) ) {
@@ -282,6 +285,18 @@ class SkinTuleapSkin extends SkinMustache {
 			$this->tuleapSidebar = new TuleapSidebar( $connection, $this->projectId );
 		}
 		return $this->tuleapSidebar;
+	}
+
+	/**
+	 * @return string
+	 */
+	private function getClassForForbiddenAccess() {
+		$user = $this->getUser();
+		$title = $this->getTitle();
+		if ( !$this->permissionManager->userCan( 'read', $user, $title ) ) {
+			return 'hidden';
+		}
+		return '';
 	}
 
 }
