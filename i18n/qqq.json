@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Miriam Schlindwein"
+			"Miriam Schlindwein",
+			"Umherirrender"
 		]
 	},
-	"tuleapskin-desc": "Description of TuleapSkin for [[Special:Version]]",
+	"tuleapskin-desc": "{{desc|name=TuleapSkin}}",
 	"tlp-personal-menu-title": "Title of button for personal menu",
 	"tlp-personal-menu-text": "Label of button for personal menu",
 	"tlp-main-menu-title": "Label of main navigation for mediawiki",
