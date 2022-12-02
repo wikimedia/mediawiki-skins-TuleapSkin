@@ -5,7 +5,7 @@
 			"Umherirrender"
 		]
 	},
-	"tuleapskin-desc": "{{desc|name=TuleapSkin}}",
+	"tuleapskin-desc": "{{desc|name=TuleapSkin|what=skin}}",
 	"tlp-personal-menu-title": "Title of button for personal menu",
 	"tlp-personal-menu-text": "Label of button for personal menu",
 	"tlp-main-menu-title": "Label of main navigation for mediawiki",
