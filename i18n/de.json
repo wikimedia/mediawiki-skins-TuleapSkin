@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Brettchenweber"
+			"Brettchenweber",
+			"Justman10000"
 		]
 	},
 	"tuleapskin-desc": "Tuleap-Oberfläche",
 	"tlp-personal-menu-title": "Persönlich",
+	"tlp-personal-menu-text": "MediaWiki Konto",
 	"tlp-tools-menu-title": "Werkzeuge",
 	"tlp-actions-menu-title": "Aktionen",
 	"tlp-administration": "Verwaltung"
