@@ -30,6 +30,7 @@ body .content-container {
 	background: var(--tlp-white-color);
 	box-shadow: var(--tlp-pane-shadow);
 	padding: var(--tlp-large-spacing) var(--tlp-medium-spacing);
+	height: 100%;
 }
 
 #tlp-content {
