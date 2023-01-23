@@ -61,4 +61,16 @@ class TuleapSidebar {
 		}
 		return false;
 	}
+
+	/**
+	 *
+	 * @return string
+	 */
+	public function getTheme() {
+		$theme = $this->connection->getIntegrationData( $this->id, 'styles' );
+		if ( is_array( $theme ) ) {
+			return $theme[ 'variant_name' ];
+		}
+		return 'orange';
+	}
 }
