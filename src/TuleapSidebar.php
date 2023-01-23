@@ -73,4 +73,17 @@ class TuleapSidebar {
 		}
 		return 'orange';
 	}
+
+	/**
+	 *
+	 * @return void
+	 */
+	public function getProjectName() {
+		$config = $this->connection->getIntegrationData( $this->id, 'project_sidebar' );
+		if ( is_array( $config ) ) {
+			$configJSON = json_decode( $config[ 'config' ], true );
+			return $configJSON[ 'project' ][ 'name' ];
+		}
+		return '';
+	}
 }
