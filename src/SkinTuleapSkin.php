@@ -6,6 +6,7 @@ use Config;
 use Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
+use Message;
 use OutputPage;
 use SkinMustache;
 use Title;
@@ -60,6 +61,7 @@ class SkinTuleapSkin extends SkinMustache {
 	 * @var mixed
 	 */
 	private $configPersonalExclude;
+
 	/**
 	 * @var PermissionManager
 	 */
@@ -137,7 +139,7 @@ class SkinTuleapSkin extends SkinMustache {
 
 		$skinData = array_merge( $parentData, [
 			'editaction' => $this->getEditAction(),
-			'sidebar' => $this->buildSidebar()[ 'navigation' ],
+			'sidebar' => $this->getSidebar(),
 			'actions' => $this->buildPrimaryActionUrls(),
 			'toolbox' => $this->getActionTools(),
 			'languages' => $this->buildSidebar()[ 'LANGUAGES' ],
@@ -301,6 +303,33 @@ class SkinTuleapSkin extends SkinMustache {
 			return 'hidden';
 		}
 		return '';
+	}
+
+	/**
+	 * @return array
+	 */
+	private function getSidebar() {
+		$sidebarLinks = $this->buildSidebar();
+		$sidebar = [];
+		if ( isset( $sidebarLinks['navigation'] ) ) {
+			$sidebar = $sidebarLinks[ 'navigation' ];
+		}
+
+		// add admin link according to
+		// https://github.com/Enalean/tuleap/blob/14.4/plugins/mediawiki_standalone/include/Permissions/Admin/AdminPermissionsController.php#L98
+		$projectName = $this->tuleapSidebar->getProjectName();
+		if ( empty( $projectName ) ) {
+			return $sidebar;
+		}
+
+		$admin[] = [
+			'text' => Message::newFromKey( 'tlp-administration' )->plain(),
+			'href' => '/mediawiki_standalone/admin/' . $projectName . '/permissions',
+			'id' => 'n-admin-permissions',
+			'active' => false
+		];
+		$extendedSidebar = array_merge( $sidebar, $admin );
+		return $extendedSidebar;
 	}
 
 }
