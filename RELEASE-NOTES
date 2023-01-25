@@ -4,6 +4,9 @@ This is a security and maintenance release of the TuleapSkin 1.0 branch.
 
 === Changes since TuleapSkin 1.0.2 ===
 * Localisation updates.
+* (Tuleap#30367) Add administration link in dropdown
+* (Tuleap#28829) Add favicon depending on user theme
+* (Tuleap#30357) Fix content height for images
 
 = TuleapSkin 1.0.2 =
 
