@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ngoxuannguyenchuong"
+			"Ngoxuannguyenchuong",
+			"Minh Nguyen"
 		]
 	},
+	"tlp-tools-menu-title": "Công cụ",
 	"tlp-administration": "Quản trị"
 }
