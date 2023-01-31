@@ -316,7 +316,7 @@ class SkinTuleapSkin extends SkinMustache {
 
 		// add admin link according to
 		// https://github.com/Enalean/tuleap/blob/14.4/plugins/mediawiki_standalone/include/Permissions/Admin/AdminPermissionsController.php#L98
-		$projectName = $this->tuleapSidebar->getProjectName();
+		$projectName = $GLOBALS['wgSitename'];
 		if ( empty( $projectName ) ) {
 			return $sidebar;
 		}
