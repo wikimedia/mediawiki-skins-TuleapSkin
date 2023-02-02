@@ -81,10 +81,6 @@ class SkinTuleapSkin extends SkinMustache {
 		$this->configTools = $config->get( 'TuleapSkinToolActions' );
 		$this->configPersonalExclude = $config->get( 'TuleapSkinUserProfileExlude' );
 		$this->permissionManager = $permissionManager;
-
-		$scriptPath = $GLOBALS['wgScriptPath'];
-		$userTheme = $this->getTuleapSidebar()->getTheme();
-		$GLOBALS['wgFavicon'] = "$scriptPath/skins/TuleapSkin/resources/images/favicon/$userTheme/favicon.ico";
 	}
 
 	/**
@@ -109,6 +105,10 @@ class SkinTuleapSkin extends SkinMustache {
 		// Add styles from user
 		$styles = $this->getTuleapSidebar()->getStyles();
 		$out->addInlineStyle( $styles );
+
+		$scriptPath = $GLOBALS['wgScriptPath'];
+		$userTheme = $this->getTuleapSidebar()->getTheme();
+		$GLOBALS['wgFavicon'] = "$scriptPath/skins/TuleapSkin/resources/images/favicon/$userTheme/favicon.ico";
 	}
 
 	/**
