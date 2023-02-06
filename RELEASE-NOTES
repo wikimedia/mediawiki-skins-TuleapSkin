@@ -3,6 +3,7 @@
 This is a security and maintenance release of the TuleapSkin 1.0 branch.
 
 === Changes since TuleapSkin 1.0.3 ===
+* (Tuleap#28829) Add favicon depending on user theme - additional fixes
 * Localisation updates.
 
 = TuleapSkin 1.0.3 =
