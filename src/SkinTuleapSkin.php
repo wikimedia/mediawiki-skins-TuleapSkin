@@ -8,7 +8,8 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
 use Message;
 use OutputPage;
-use SkinMustache;
+use SkinTemplate;
+use TemplateParser;
 use Title;
 
 /**
@@ -16,12 +17,17 @@ use Title;
  *
  * @ingroup Skins
  */
-class SkinTuleapSkin extends SkinMustache {
+class SkinTuleapSkin extends SkinTemplate {
 
 	/**
 	 * @var string
 	 */
 	public $skinname = 'tuleap';
+
+	/**
+	 * @var string
+	 */
+	public $template = 'TuleapTemplate';
 
 	/**
 	 * @var TuleapSidebar
@@ -80,7 +86,6 @@ class SkinTuleapSkin extends SkinMustache {
 	 */
 	public function __construct( $config, $permissionManager, $userGroupManager, $options = null ) {
 		parent::__construct( $options );
-		$this->options['templateDirectory'] = dirname( __DIR__ ) . "/resources/templates/";
 
 		$this->projectId = $config->get( 'TuleapProjectId' );
 		$this->configActions = $config->get( 'TuleapSkinEditActions' );
@@ -88,6 +93,15 @@ class SkinTuleapSkin extends SkinMustache {
 		$this->configPersonalExclude = $config->get( 'TuleapSkinUserProfileExlude' );
 		$this->permissionManager = $permissionManager;
 		$this->userGroupManager = $userGroupManager;
+	}
+
+	/**
+	 *
+	 * @inheritDoc
+	 */
+	protected function setupTemplate( $classname ) {
+		$tp = new TemplateParser( dirname( __DIR__ ) . '/resources/templates' );
+		return new TuleapTemplate( $this->getConfig(), $tp );
 	}
 
 	/**
@@ -137,13 +151,23 @@ class SkinTuleapSkin extends SkinMustache {
 	 */
 	public function getTemplateData() {
 		$mainpage = Title::newMainPage();
-		$parentData = parent::getTemplateData();
+		$parentData = parent::prepareQuickTemplate();
 
-		$this->content_navigation = $this->buildContentNavigationUrls();
+		$this->content_navigation = $parentData->get( 'content_navigation' );
 		$this->buildActionLinks();
 		$this->actionProvider = new TuleapSkinActionProvider( $this->actions );
+		$templateData = parent::getTemplateData();
 
-		$skinData = array_merge( $parentData, [
+		$skinData = [
+			'data-search-box' => $templateData['data-search-box'],
+			'html-site-notice' => $parentData->get( 'sitenotice' ),
+			'html-title' => $parentData->get( 'title' ),
+			'html-subtitle' => $parentData->get( 'subtitle' ),
+			'html-body-content' => $parentData->get( 'bodycontent' ),
+			'html-categories' => $parentData->get( 'catlinks' ),
+			'html-after-content' => $parentData->get( 'dataAfterContent' ),
+			'html-undelete-link' => $parentData->get( 'undelete' ),
+			'html-user-language-attributes' => $parentData->get( 'userlangattributes' ),
 			'editaction' => $this->getEditAction(),
 			'sidebar' => $this->getSidebar(),
 			'actions' => $this->buildPrimaryActionUrls(),
@@ -160,7 +184,7 @@ class SkinTuleapSkin extends SkinMustache {
 			'personal-class' => $this->getClassForForbiddenAccess(),
 			'mw-tlp-search-class' => $this->getClassForForbiddenAccess(),
 			'breadcrumb-class' => $this->getClassForForbiddenAccess()
-		] );
+		];
 
 		if ( empty( $skinData['actions'] ) ) {
 			$skinData = array_merge( $skinData, [

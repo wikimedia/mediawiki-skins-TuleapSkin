@@ -20,3 +20,7 @@ tuleap-project-sidebar[collapsed] + .main-container {
 	height: 46px;
 	background-color: var(--tlp-background-color);
 }
+
+.mw-parser-output a.external {
+	background-image: none;
+}

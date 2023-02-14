@@ -6,12 +6,12 @@
 	display: none;
 }
 
-.ve-active .ve-init-mw-desktopArticleTarget-toolbar-opened > .oo-ui-toolbar-bar {
+.ve-active .ve-init-mw-desktopArticleTarget-toolbar-open > .oo-ui-toolbar-bar {
 	border: 0;
 	box-shadow: var(--tlp-sticky-header-shadow);
 }
 
-.ve-active .ve-init-mw-desktopArticleTarget-toolbar-opened.ve-ui-toolbar-floating > .oo-ui-toolbar-bar {
+.ve-active .ve-init-mw-desktopArticleTarget-toolbar-open.ve-ui-toolbar-floating > .oo-ui-toolbar-bar {
 	padding-right: 200px;
 }
 

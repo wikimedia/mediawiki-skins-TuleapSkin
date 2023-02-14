@@ -25,6 +25,14 @@
 				"MainConfig",
 				"PermissionManager",
 				"UserGroupManager"
+			],
+			"args": [
+				{
+					"name": "tuleap",
+					"bodyOnly": true,
+					"template": "TuleapTemplate",
+					"responsive": true
+				}
 			]
 		}
 	},
@@ -88,7 +96,7 @@
 	"config": {
 		"TuleapSkinEditActions": {
 			"value": [
-				"talk", "history", "info", "permalink", "whatlinkshere", "-", "protect", "watch", "move", "delete", "-", "pdfbook", "print"
+				"talk", "history", "info", "permalink", "whatlinkshere", "-", "protect", "watch", "move", "delete", "-", "mpdf", "print"
 			]
 		},
 		"TuleapSkinToolActions": {
@@ -98,7 +106,7 @@
 		},
 		"TuleapSkinUserProfileExlude": {
 			"value": [
-				"userpage", "mytalk", "watchlist"
+				"userpage", "mytalk", "watchlist", "anonuserpage"
 			]
 		}
 	},
