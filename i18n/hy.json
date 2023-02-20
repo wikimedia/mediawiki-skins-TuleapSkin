@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"GeoO"
+			"GeoO",
+			"Սերգեյ Սաֆարյան"
 		]
 	},
-	"tlp-personal-menu-text": "MediaWiki հաշիվ"
+	"tlp-personal-menu-text": "MediaWiki հաշիվ",
+	"tlp-actions-menu-title": "Գործողություններ"
 }
