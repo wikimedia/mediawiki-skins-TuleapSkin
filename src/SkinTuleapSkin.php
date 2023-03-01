@@ -68,11 +68,17 @@ class SkinTuleapSkin extends SkinMustache {
 	private $permissionManager;
 
 	/**
+	 * @var UserGroupManager
+	 */
+	private $userGroupManager;
+
+	/**
 	 * @param Config $config
 	 * @param PermissionManager $permissionManager
+	 * @param UserGroupManager $userGroupManager
 	 * @param array|null $options
 	 */
-	public function __construct( $config, $permissionManager, $options = null ) {
+	public function __construct( $config, $permissionManager, $userGroupManager, $options = null ) {
 		parent::__construct( $options );
 		$this->options['templateDirectory'] = dirname( __DIR__ ) . "/resources/templates/";
 
@@ -81,6 +87,7 @@ class SkinTuleapSkin extends SkinMustache {
 		$this->configTools = $config->get( 'TuleapSkinToolActions' );
 		$this->configPersonalExclude = $config->get( 'TuleapSkinUserProfileExlude' );
 		$this->permissionManager = $permissionManager;
+		$this->userGroupManager = $userGroupManager;
 	}
 
 	/**
@@ -312,6 +319,13 @@ class SkinTuleapSkin extends SkinMustache {
 		$sidebar = [];
 		if ( isset( $sidebarLinks['navigation'] ) ) {
 			$sidebar = $sidebarLinks[ 'navigation' ];
+		}
+
+		$user = $this->getUser();
+		$groups = $this->userGroupManager->getUserGroups( $user );
+
+		if ( !in_array( 'sysop', $groups ) ) {
+			return $sidebar;
 		}
 
 		// add admin link according to

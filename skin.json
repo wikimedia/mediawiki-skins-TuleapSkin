@@ -23,7 +23,8 @@
 			"class": "TuleapSkin\\SkinTuleapSkin",
 			"services": [
 				"MainConfig",
-				"PermissionManager"
+				"PermissionManager",
+				"UserGroupManager"
 			]
 		}
 	},
