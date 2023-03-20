@@ -2,10 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Korjaus1",
-			"Rönttönen"
+			"Rönttönen",
+			"Pyscowicz"
 		]
 	},
 	"tlp-personal-menu-title": "Henkilökohtainen",
+	"tlp-personal-menu-text": "MediaWiki-tili",
 	"tlp-tools-menu-title": "Työkalut",
-	"tlp-actions-menu-title": "Toiminnot"
+	"tlp-actions-menu-title": "Toiminnot",
+	"tlp-administration": "Ylläpito"
 }
