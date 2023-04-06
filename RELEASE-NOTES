@@ -1,8 +1,26 @@
+= TuleapSkin 1.0.6 =
+
+This is a security and maintenance release of the TuleapSkin 1.0 branch.
+
+=== Changes since TuleapSkin 1.0.5 ===
+* Localisation updates.
+* ...
+
+= TuleapSkin 1.0.5 =
+
+This is a security and maintenance release of the TuleapSkin 1.0 branch.
+
+=== Changes since TuleapSkin 1.0.4 ===
+* (Tuleap#31105) Fix admin link permissions
+* (Tuleap#31121) Fix page title parsing in template
+* Localisation updates.
+
 = TuleapSkin 1.0.4 =
 
 This is a security and maintenance release of the TuleapSkin 1.0 branch.
 
 === Changes since TuleapSkin 1.0.3 ===
+* (Tuleap#28829) Add favicon depending on user theme - additional fixes
 * Localisation updates.
 
 = TuleapSkin 1.0.3 =
