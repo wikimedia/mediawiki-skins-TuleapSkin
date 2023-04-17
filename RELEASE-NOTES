@@ -3,8 +3,7 @@
 This is a security and maintenance release of the TuleapSkin 1.0 branch.
 
 === Changes since TuleapSkin 1.0.5 ===
-* Localisation updates.
-* ...
+* (Tuleap#31561) Do not show the menu separator when its the last menu item
 
 = TuleapSkin 1.0.5 =
 
