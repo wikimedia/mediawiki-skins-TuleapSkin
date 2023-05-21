@@ -20,7 +20,7 @@ class TuleapSkinActionProviderTest extends MediaWikiIntegrationTestCase {
 		$this->assertArrayEquals( $expectedLinks, $links );
 	}
 
-	public function provideGetLinksTestData() {
+	public static function provideGetLinksTestData() {
 		$links = [
 			'main' => [
 				"class" => "selected",
