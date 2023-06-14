@@ -1,16 +1,22 @@
+/* stylelint-disable selector-type-no-unknown */
 tuleap-project-sidebar {
 	display: none;
 }
+/* stylelint-enable selector-type-no-unknown */
+
 .fixed-container {
 	display: none;
 }
+
 .navbar {
 	display: none;
 }
+
 .title-section-actions {
 	display: none;
 }
+
 .main-container {
-	max-width: calc( 100vw - 50px);
+	max-width: calc( 100vw - 50px );
 	width: 100%;
 }

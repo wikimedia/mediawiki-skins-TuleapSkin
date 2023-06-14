@@ -32,10 +32,13 @@ class TuleapSidebar {
 	 */
 	public function getStyles() {
 		$styles = $this->connection->getIntegrationData( $this->id, 'styles' );
-		if ( is_array( $styles ) ) {
-			return $styles[ 'content' ];
+		if ( !is_array( $styles ) ) {
+			return '';
 		}
-		return '';
+		if ( !isset( $styles[ 'content' ] ) || !is_string( $styles[ 'content' ] ) ) {
+			return '';
+		}
+		return $styles[ 'content' ];
 	}
 
 	/**
@@ -44,10 +47,13 @@ class TuleapSidebar {
 	 */
 	public function getConfiguration() {
 		$config = $this->connection->getIntegrationData( $this->id, 'project_sidebar' );
-		if ( is_array( $config ) ) {
-			return $config[ 'config' ];
+		if ( !is_array( $config ) ) {
+			return '';
 		}
-		return '';
+		if ( !isset( $config[ 'config' ] ) || !is_string( $config[ 'config' ] ) ) {
+			return '';
+		}
+		return $config[ 'config' ];
 	}
 
 	/**
@@ -56,10 +62,13 @@ class TuleapSidebar {
 	 */
 	public function isCollapsed() {
 		$config = $this->connection->getIntegrationData( $this->id, 'project_sidebar' );
-		if ( is_array( $config ) ) {
-			return $config[ 'is_collapsed' ];
+		if ( !is_array( $config ) ) {
+			return false;
 		}
-		return false;
+		if ( !isset( $config[ 'is_collapsed' ] ) || !( $config[ 'config' ] ) ) {
+			return false;
+		}
+		return $config[ 'is_collapsed' ];
 	}
 
 	/**
@@ -68,9 +77,12 @@ class TuleapSidebar {
 	 */
 	public function getTheme() {
 		$theme = $this->connection->getIntegrationData( $this->id, 'styles' );
-		if ( is_array( $theme ) ) {
-			return $theme[ 'variant_name' ];
+		if ( !is_array( $theme ) ) {
+			return 'orange';
 		}
-		return 'orange';
+		if ( !isset( $theme[ 'variant_name' ] ) || !is_string( $theme[ 'variant_name' ] ) ) {
+			return 'orange';
+		}
+		return $theme[ 'variant_name' ];
 	}
 }

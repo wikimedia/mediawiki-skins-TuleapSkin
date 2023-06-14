@@ -8,36 +8,42 @@
 }
 
 .mw-tlp-row > .mw-tlp-box {
-	width: calc(50% - 2em);
+	width: calc( 50% - 2em );
 	margin-left: 0.5em;
 	margin-right: 0.5em;
 }
 
 .mainpage .panel {
-	margin: 0 0 var(--tlp-medium-spacing);
-	border: 1px solid var(--tlp-neutral-normal-color);
-	border-radius: var(--tlp-large-radius);
-	background: var(--tlp-neutral-light-color);
-	box-shadow: var(--tlp-pane-shadow);
-	padding: var(--tlp-medium-spacing);
+	margin: 0 0 var( --tlp-medium-spacing );
+	border: 1px solid var( --tlp-neutral-normal-color );
+	border-radius: var( --tlp-large-radius );
+	background: var( --tlp-neutral-light-color );
+	box-shadow: var( --tlp-pane-shadow );
+	padding: var( --tlp-medium-spacing );
 }
 
+/* stylelint-disable declaration-property-unit-disallowed-list */
 .mainpage .panel-heading {
-	color: var(--tlp-main-color);
+	color: var( --tlp-main-color );
 	font-size: 15px;
 	font-weight: 600;
 	letter-spacing: .5px;
 	text-transform: uppercase;
 }
+/* stylelint-enable declaration-property-unit-disallowed-list */
 
+/* stylelint-disable declaration-property-value-disallowed-list */
 .mainpage h2 {
-	color: var(--tlp-dimmed-color);
+	color: var( --tlp-dimmed-color );
 	text-transform: uppercase;
 	border-bottom: none;
 }
+/* stylelint-enable declaration-property-value-disallowed-list */
+
 #mw-content-text .mainpage a.new {
-	color: var(--tlp-main-color);
+	color: var( --tlp-main-color );
 }
+
 .mainpage .mw-editsection {
 	display: none;
 }

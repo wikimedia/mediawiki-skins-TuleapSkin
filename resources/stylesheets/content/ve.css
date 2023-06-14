@@ -8,7 +8,7 @@
 
 .ve-active .ve-init-mw-desktopArticleTarget-toolbar-open > .oo-ui-toolbar-bar {
 	border: 0;
-	box-shadow: var(--tlp-sticky-header-shadow);
+	box-shadow: var( --tlp-sticky-header-shadow );
 }
 
 .ve-active .ve-init-mw-desktopArticleTarget-toolbar-open.ve-ui-toolbar-floating > .oo-ui-toolbar-bar {
@@ -17,8 +17,8 @@
 
 body.mediawiki.skin-tuleap .ve-ui-toolbar-group-save.oo-ui-widget-disabled .ve-ui-toolbar-saveButton {
 	border-color: transparent;
-	background: var(--tlp-main-color-lighter-30);
-	color: var(--tlp-white-color-transparent-40);
+	background: var( --tlp-main-color-lighter-30 );
+	color: var( --tlp-white-color-transparent-40 );
 }
 
 .ve-active .mw-body {
@@ -26,5 +26,5 @@ body.mediawiki.skin-tuleap .ve-ui-toolbar-group-save.oo-ui-widget-disabled .ve-u
 }
 
 .ve-active .ve-init-mw-desktopArticleTarget-originalContent {
-	padding-left: var(--tlp-medium-spacing);
+	padding-left: var( --tlp-medium-spacing );
 }
