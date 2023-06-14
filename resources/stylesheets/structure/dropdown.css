@@ -1,34 +1,38 @@
+/* stylelint-disable time-min-milliseconds */
 .mw-tlp-skin-btn-dropdown-menu {
 	position: absolute;
 	z-index: 1000;
 	max-width: 350px;
 	padding: 6px 0 0;
-	transform: translateY(-10px);
-	transition: opacity 75ms,transform 75ms;
+	transition: opacity 75ms, transform 75ms;
 	visibility: hidden;
 	pointer-events: none;
 	margin: 10px 0 0;
-	border-radius: var(--tlp-medium-radius);
-	background: var(--tlp-white-color);
+	border-radius: var( --tlp-medium-radius );
+	background: var( --tlp-white-color );
 	display: block;
-	transform: opacity 75ms ease-out,transform 75ms ease-out,box-shadow 75ms ease-out;
+	transform: opacity 75ms ease-out, transform 75ms ease-out, box-shadow 75ms ease-out;
 }
+/* stylelint-enable time-min-milliseconds */
 
 .mw-tlp-skin-btn-dropdown-menu.dropdown-shown {
 	visibility: visible;
 	pointer-events: auto;
-	box-shadow: var(--tlp-flyover-shadow);
+	box-shadow: var( --tlp-flyover-shadow );
 }
+
 .mw-tlp-skin-btn-dropdown-menu ul {
 	margin: 0;
 	z-index: 100;
 	list-style-type: none;
 }
+
+/* stylelint-disable unit-disallowed-list */
 .mw-tlp-skin-btn-dropdown-menu li a {
 	display: block;
-	padding: var(--tlp-small-spacing) var(--tlp-medium-spacing);
+	padding: var( --tlp-small-spacing ) var( --tlp-medium-spacing );
 	overflow: hidden;
-	color: var(--tlp-dark-color);
+	color: var( --tlp-dark-color );
 	font-size: .8125rem;
 	font-weight: 500;
 	letter-spacing: normal;
@@ -36,67 +40,77 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
+/* stylelint-enable unit-disallowed-list */
+
 .mw-tlp-skin-btn-dropdown-menu li a:hover {
-	background-color: var(--tlp-main-color-transparent-90);
-	color: var(--tlp-main-color);
+	background-color: var( --tlp-main-color-transparent-90 );
+	color: var( --tlp-main-color );
 	text-decoration: none;
 }
+
 .mw-tlp-skin-btn-dropdown-menu li a.new {
-	color: var(--tlp-dark-color);
-}
-.mw-tlp-skin-btn-dropdown-menu li a:hover {
-	color: var(--tlp-main-color);
+	color: var( --tlp-dark-color );
 }
 
 .mw-tlp-skin-btn-dropdown-menu .mw-tlp-skin-admin {
-	padding-top: var(--tlp-small-spacing);
+	padding-top: var( --tlp-small-spacing );
 }
 
 .mw-tlp-dropdown {
 	display: inline-block;
 	position: relative;
 }
+
 .mw-tlp-dropdown-split-btn {
 	display: flex;
 	align-items: center;
 }
 
+/* stylelint-disable unit-disallowed-list */
 .mw-tlp-skin-dropdown-title {
-	padding: var(--tlp-small-spacing) var(--tlp-medium-spacing);
+	padding: var( --tlp-small-spacing ) var( --tlp-medium-spacing );
 	border-top: 0;
-	color: var(--tlp-dimmed-color);
+	color: var( --tlp-dimmed-color );
 	font-size: .625rem;
 	font-weight: 600;
 	letter-spacing: .5px;
 	line-height: 1rem;
 	text-transform: uppercase;
 }
+/* stylelint-enable unit-disallowed-list */
+
 .mw-tlp-dropdown .mw-tlp-skin-btn {
 	padding: 4px 20px 2px 6px;
 }
-.mw-tlp-skin-btn.mw-tlp-dropdown-marker::after{
-	content: "\e001";
+
+/* stylelint-disable unit-disallowed-list, time-min-milliseconds, font-family-no-missing-generic-family-keyword */
+.mw-tlp-skin-btn.mw-tlp-dropdown-marker::after {
+	content: '\e001';
 	position: absolute;
 	z-index: 1;
 	right: 8px;
 	transition: color 75ms;
-	font-family: "TuleapSkinsIconFonts";
+	font-family: 'TuleapSkinsIconFonts';
 	font-size: .625rem;
 }
+/* stylelint-enable unit-disallowed-list, time-min-milliseconds, font-family-no-missing-generic-family-keyword */
 
 .mw-tlp-dropdown-split-btn .mw-tlp-dropdown-split-btn-main {
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
-	padding: 0 var(--tlp-medium-spacing);
+	padding: 0 var( --tlp-medium-spacing );
 }
 
 .mw-tlp-dropdown-split-btn .mw-tlp-dropdown-split-btn-caret {
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
-	padding: 0 var(--tlp-medium-spacing);
+	padding: 0 var( --tlp-medium-spacing );
 }
+
+/* stylelint-disable unit-disallowed-list, font-family-no-missing-generic-family-keyword */
 .mw-tlp-dropdown-split-btn .mw-tlp-dropdown-split-btn-caret::before {
-	content: "\e001";
-	font-family: "TuleapSkinsIconFonts";
+	content: '\e001';
+	font-family: 'TuleapSkinsIconFonts';
 	font-size: .875rem;
 }
+/* stylelint-enable unit-disallowed-list, font-family-no-missing-generic-family-keyword */

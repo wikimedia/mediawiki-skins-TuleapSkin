@@ -1,24 +1,28 @@
 body {
 	min-height: 100vh;
-	background-color: var(--tlp-background-color);
-	color: var(--tlp-typo-default-text-color);
+	background-color: var( --tlp-background-color );
+	color: var( --tlp-typo-default-text-color );
 }
+
 .main-container {
-	max-width: calc( 100vw - 250px);
+	max-width: calc( 100vw - 250px );
 	width: 100%;
 }
 
-tuleap-project-sidebar[collapsed] + .main-container {
-	max-width: calc( 100vw - 50px);
+/* stylelint-disable selector-type-no-unknown */
+tuleap-project-sidebar[ collapsed ] + .main-container {
+	max-width: calc( 100vw - 50px );
 	width: 100%;
 }
+/* stylelint-enable selector-type-no-unknown */
+
 #main-content {
 	display: flex;
 }
 
 .content-end-spacer {
 	height: 46px;
-	background-color: var(--tlp-background-color);
+	background-color: var( --tlp-background-color );
 }
 
 .mw-parser-output a.external {

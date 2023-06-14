@@ -1,18 +1,22 @@
 /* toc */
 .toctogglelabel {
-	color: var(--tlp-dark-color-lighter-10);
-}
-.toctogglelabel:hover {
-	color: var(--tlp-main-color);
+	color: var( --tlp-dark-color-lighter-10 );
 }
 
-#toc a, .tocnumber {
-	color: var(--tlp-dark-color-lighter-10);
+.toctogglelabel:hover {
+	color: var( --tlp-main-color );
 }
+
+#toc a,
+.tocnumber {
+	color: var( --tlp-dark-color-lighter-10 );
+}
+
 #toc a:hover {
-	color: var(--tlp-main-color);
+	color: var( --tlp-main-color );
 	text-decoration: none;
 }
+
 .toc .toctitle {
 	text-align: left;
 }

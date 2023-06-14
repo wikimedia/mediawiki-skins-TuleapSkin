@@ -133,20 +133,6 @@ class SkinTuleapSkin extends SkinTemplate {
 
 	/**
 	 *
-	 * @return bool
-	 */
-	public function isViewMode() {
-		if (
-			$this->getTitle()->isMainPage() &&
-			$this->getRequest()->getRawVal( 'action', 'view' ) === 'view'
-		) {
-			return true;
-		}
-		return false;
-	}
-
-	/**
-	 *
 	 * @return array
 	 */
 	public function getTemplateData() {

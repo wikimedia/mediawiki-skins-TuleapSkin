@@ -10,6 +10,7 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-banana-checker' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-eslint' );
+	grunt.loadNpmTasks( 'grunt-stylelint' );
 
 	grunt.initConfig( {
 		eslint: {
@@ -23,6 +24,14 @@ module.exports = function ( grunt ) {
 				'!resources/lib/project-sidebar.umd.js'
 			]
 		},
+		stylelint: {
+			all: [
+				'**/*.{css,less}',
+				'!node_modules/**',
+				'!resources/lib/project-sidebar.css',
+				'!vendor/**'
+			]
+		},
 		banana: conf.MessagesDirs,
 		watch: {
 			files: [
@@ -33,6 +42,6 @@ module.exports = function ( grunt ) {
 		}
 	} );
 
-	grunt.registerTask( 'test', [ 'eslint', 'banana' ] );
+	grunt.registerTask( 'test', [ 'eslint', 'stylelint', 'banana' ] );
 	grunt.registerTask( 'default', 'test' );
 };
