@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hanna Tardos"
+			"Hanna Tardos",
+			"Krisztina"
 		]
 	},
-	"tlp-personal-menu-text": "MediaWiki fiók"
+	"tlp-personal-menu-text": "MediaWiki fiók",
+	"tlp-tools-menu-title": "Eszközök",
+	"tlp-administration": "Adminisztráció"
 }
