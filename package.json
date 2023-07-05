@@ -3,7 +3,7 @@
 	"private": true,
 	"scripts": {
 		"test": "grunt test",
-		"postinstall": "cp node_modules/@tuleap/project-sidebar/dist/project-sidebar.umd.js resources/lib/ && cp node_modules/@tuleap/project-sidebar/dist/style.css resources/lib/project-sidebar.css"
+		"postinstall": "cp node_modules/@tuleap/project-sidebar/dist/project-sidebar.umd.cjs resources/lib/ && cp node_modules/@tuleap/project-sidebar/dist/style.css resources/lib/project-sidebar.css"
 	},
 	"devDependencies": {
 		"eslint-config-wikimedia": "0.25.0",
@@ -14,6 +14,6 @@
 		"stylelint-config-wikimedia": "0.15.0"
 	},
 	"dependencies": {
-		"@tuleap/project-sidebar": "^2.0.0"
+		"@tuleap/project-sidebar": "^2.2.4"
 	}
 }

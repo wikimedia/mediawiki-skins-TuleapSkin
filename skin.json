@@ -79,7 +79,7 @@
 		"skins.tuleap-sidebar": {
 			"class": "MWStake\\MediaWiki\\Component\\ThirdPartyResources\\ResourceLoader\\DistFiles",
 			"packageFiles": [
-				"lib/project-sidebar.umd.js"
+				"lib/project-sidebar.umd.cjs"
 			]
 		},
 		"skins.tuleap.scripts": {
