@@ -4,11 +4,13 @@
 			"Gulka.nik",
 			"Kareyac",
 			"Okras",
-			"Артём 13327"
+			"Артём 13327",
+			"BerryAVGN"
 		]
 	},
+	"tuleapskin-desc": "Тема оформления Tuleap",
 	"tlp-personal-menu-title": "Личное",
-	"tlp-personal-menu-text": "Аккаунт MediaWiki",
+	"tlp-personal-menu-text": "Учётная запись MediaWiki",
 	"tlp-tools-menu-title": "Инструменты",
 	"tlp-actions-menu-title": "Действия",
 	"tlp-administration": "Администрация"
