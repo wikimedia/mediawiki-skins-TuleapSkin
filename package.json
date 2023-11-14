@@ -12,6 +12,6 @@
 		"grunt-eslint": "24.0.0"
 	},
 	"dependencies": {
-		"@tuleap/project-sidebar": "^2.4.0"
+		"@tuleap/project-sidebar": "^2.5.0"
 	}
 }
