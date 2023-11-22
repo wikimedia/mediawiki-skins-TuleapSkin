@@ -1,3 +1,12 @@
+= TuleapSkin 1.0.10 =
+
+This is a security and maintenance release of the TuleapSkin 1.0 branch.
+
+=== Changes since TuleapSkin 1.0.9 ===
+* Update Tuleap sidebar component to 2.5.0
+* Fix visibility of categories (https://tuleap.net/plugins/tracker/?aid=35129)
+* Localisation updates
+
 = TuleapSkin 1.0.9 =
 
 This is a security and maintenance release of the TuleapSkin 1.0 branch.
