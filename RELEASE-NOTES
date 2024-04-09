@@ -1,3 +1,10 @@
+= TuleapSkin 1.0.11 =
+
+This is a security and maintenance release of the TuleapSkin 1.0 branch.
+
+=== Changes since TuleapSkin 1.0.10 ===
+* Update Tuleap sidebar component to 2.6.1
+
 = TuleapSkin 1.0.10 =
 
 This is a security and maintenance release of the TuleapSkin 1.0 branch.
