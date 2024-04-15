@@ -58,9 +58,13 @@ a, a:visited {
 	color: var(--tlp-danger-dark-color);
 }
 
-pre, .mw-code, code  {
-	color: var(--tlp-dark-color);
-	font-family: var(--tlp-font-family-mono);
+#mw-content-text a.external {
+	padding-right: 0;
+}
+
+pre, .mw-code, code {
+	color: var( --tlp-dark-color );
+	font-family: var( --tlp-font-family-mono );
 }
 
 blockquote {
