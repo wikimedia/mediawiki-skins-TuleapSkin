@@ -28,3 +28,7 @@ body.mediawiki.skin-tuleap .ve-ui-toolbar-group-save.oo-ui-widget-disabled .ve-u
 .ve-active .ve-init-mw-desktopArticleTarget-originalContent {
 	padding-left: var( --tlp-medium-spacing );
 }
+
+.ve-active .mediawiki.oo-ui-windowManager-modal-active .ve-ui-overlay-global {
+	z-index: 1002;
+}
