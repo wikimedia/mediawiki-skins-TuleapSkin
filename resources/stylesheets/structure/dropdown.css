@@ -27,20 +27,18 @@
 	list-style-type: none;
 }
 
-/* stylelint-disable unit-disallowed-list */
 .mw-tlp-skin-btn-dropdown-menu li a {
 	display: block;
 	padding: var( --tlp-small-spacing ) var( --tlp-medium-spacing );
 	overflow: hidden;
 	color: var( --tlp-dark-color );
-	font-size: .8125rem;
+	font-size: 0.8125rem;
 	font-weight: 500;
 	letter-spacing: normal;
 	line-height: 1rem;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-/* stylelint-enable unit-disallowed-list */
 
 .mw-tlp-skin-btn-dropdown-menu li a:hover {
 	background-color: var( --tlp-main-color-transparent-90 );
@@ -66,24 +64,22 @@
 	align-items: center;
 }
 
-/* stylelint-disable unit-disallowed-list */
 .mw-tlp-skin-dropdown-title {
 	padding: var( --tlp-small-spacing ) var( --tlp-medium-spacing );
 	border-top: 0;
 	color: var( --tlp-dimmed-color );
-	font-size: .625rem;
+	font-size: 0.625rem;
 	font-weight: 600;
-	letter-spacing: .5px;
+	letter-spacing: 0.5px;
 	line-height: 1rem;
 	text-transform: uppercase;
 }
-/* stylelint-enable unit-disallowed-list */
 
 .mw-tlp-dropdown .mw-tlp-skin-btn {
 	padding: 4px 20px 2px 6px;
 }
 
-/* stylelint-disable unit-disallowed-list, time-min-milliseconds, font-family-no-missing-generic-family-keyword */
+/* stylelint-disable time-min-milliseconds, font-family-no-missing-generic-family-keyword */
 .mw-tlp-skin-btn.mw-tlp-dropdown-marker::after {
 	content: '\e001';
 	position: absolute;
@@ -91,9 +87,9 @@
 	right: 8px;
 	transition: color 75ms;
 	font-family: 'TuleapSkinsIconFonts';
-	font-size: .625rem;
+	font-size: 0.625rem;
 }
-/* stylelint-enable unit-disallowed-list, time-min-milliseconds, font-family-no-missing-generic-family-keyword */
+/* stylelint-enable time-min-milliseconds, font-family-no-missing-generic-family-keyword */
 
 .mw-tlp-dropdown-split-btn .mw-tlp-dropdown-split-btn-main {
 	border-top-right-radius: 0;
@@ -107,10 +103,10 @@
 	padding: 0 var( --tlp-medium-spacing );
 }
 
-/* stylelint-disable unit-disallowed-list, font-family-no-missing-generic-family-keyword */
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
 .mw-tlp-dropdown-split-btn .mw-tlp-dropdown-split-btn-caret::before {
 	content: '\e001';
 	font-family: 'TuleapSkinsIconFonts';
-	font-size: .875rem;
+	font-size: 0.875rem;
 }
-/* stylelint-enable unit-disallowed-list, font-family-no-missing-generic-family-keyword */
+/* stylelint-enable font-family-no-missing-generic-family-keyword */

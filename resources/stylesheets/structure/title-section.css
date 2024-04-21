@@ -31,7 +31,6 @@
 	min-width: var( --tlp-medium-spacing );
 }
 
-/* stylelint-disable unit-disallowed-list */
 #p-search input[ type='search' ] {
 	height: 40px;
 	padding: 0 15px 0 33px;
@@ -41,15 +40,14 @@
 	background: no-repeat url( ../../images/search.svg );
 	background-color: var( --tlp-white-color );
 	background-position: 13px center;
-	font-size: .8125rem;
+	font-size: 0.8125rem;
 	font-family: var( --tlp-font-family );
 }
-/* stylelint-enable unit-disallowed-list */
 
 #p-search input[ type='search' ]:focus,
 #p-search input[ type='search' ]:active,
 #p-search input[ type='search' ]:focus-visible {
-	transition: border-color .15s linear, box-shadow .35s;
+	transition: border-color 0.15s linear, box-shadow 0.35s;
 	border-color: var( --tlp-main-color );
 	box-shadow: var( --tlp-shadow-focus );
 	outline: 0;

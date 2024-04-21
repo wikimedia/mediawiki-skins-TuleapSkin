@@ -95,7 +95,7 @@ class TuleapSidebarTest extends MediaWikiIntegrationTestCase {
 		->disableOriginalConstructor()
 		->getMock();
 
-		$connection->method( 'getIntegrationData' )->will( $this->returnValue( $integrationData ) );
+		$connection->method( 'getIntegrationData' )->willReturn( $integrationData );
 		return $connection;
 	}
 

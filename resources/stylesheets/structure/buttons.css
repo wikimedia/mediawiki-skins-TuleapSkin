@@ -1,4 +1,4 @@
-/* stylelint-disable time-min-milliseconds, unit-disallowed-list */
+/* stylelint-disable time-min-milliseconds */
 .mw-tlp-skin-btn {
 	display: inline-flex;
 	align-items: center;
@@ -11,7 +11,7 @@
 	border-radius: var( --tlp-medium-radius );
 	box-shadow: var( --tlp-button-shadow );
 	font-family: var( --tlp-font-family );
-	font-size: .875rem;
+	font-size: 0.875rem;
 	font-weight: 500;
 	letter-spacing: 0;
 	line-height: 1.5rem;
@@ -23,7 +23,7 @@
 	cursor: pointer;
 	position: relative;
 }
-/* stylelint-enable time-min-milliseconds, unit-disallowed-list */
+/* stylelint-enable time-min-milliseconds */
 
 a.mw-tlp-skin-btn {
 	height: 40px;

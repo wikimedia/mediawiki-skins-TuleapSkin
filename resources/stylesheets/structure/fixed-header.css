@@ -7,10 +7,9 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: var( --tlp-medium-spacing ) var( --tlp-medium-spacing ) 0;
-	transition: padding ease-in-out .1s;
+	transition: padding ease-in-out 0.1s;
 }
 
-/* stylelint-disable unit-disallowed-list */
 .mw-tlp-fixed-btn {
 	border: 1px solid var( --tlp-white-color );
 	background: var( --tlp-white-color );
@@ -18,7 +17,7 @@
 	padding: 0 var( --tlp-medium-spacing );
 	color: var( --tlp-dark-color );
 	font-family: var( --tlp-font-family );
-	font-size: .875rem;
+	font-size: 0.875rem;
 	font-weight: 500;
 	letter-spacing: 0;
 	line-height: 1.5rem;
@@ -29,12 +28,11 @@
 	white-space: nowrap;
 	cursor: pointer;
 }
-/* stylelint-enable unit-disallowed-list */
 
 .fixed-container .mw-tlp-fixed-btn {
 	height: 40px;
 	margin: 0 0 0 var( --tlp-small-spacing );
-	transition: padding ease-in-out .1s, box-shadow ease-in-out .1s;
+	transition: padding ease-in-out 0.1s, box-shadow ease-in-out 0.1s;
 	border-radius: 30px;
 }
 
