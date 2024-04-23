@@ -6,6 +6,7 @@ use Config;
 use Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\User\UserGroupManager;
 use Message;
 use OutputPage;
 use SkinTemplate;
@@ -55,7 +56,7 @@ class SkinTuleapSkin extends SkinTemplate {
 	 */
 	private $actions = [];
 
-	/** @var string */
+	/** @var int */
 	private $projectId;
 
 	/**
@@ -194,7 +195,7 @@ class SkinTuleapSkin extends SkinTemplate {
 	}
 
 	/**
-	 * @return string
+	 * @return string[]
 	 */
 	private function getEditAction() {
 		$action = [];
@@ -341,10 +342,11 @@ class SkinTuleapSkin extends SkinTemplate {
 		// add admin link according to
 		// https://github.com/Enalean/tuleap/blob/14.4/plugins/mediawiki_standalone/include/Permissions/Admin/AdminPermissionsController.php#L98
 		$projectName = $GLOBALS['wgSitename'];
-		if ( empty( $projectName ) ) {
+		if ( !$projectName ) {
 			return $sidebar;
 		}
 
+		$admin = [];
 		$admin[] = [
 			'text' => Message::newFromKey( 'tlp-administration' )->plain(),
 			'href' => '/mediawiki_standalone/admin/' . $projectName . '/permissions',
