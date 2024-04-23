@@ -4,7 +4,7 @@ namespace TuleapSkin;
 
 use BaseTemplate;
 use Config;
-use TemplateParser;
+use MediaWiki\Html\TemplateParser;
 
 class TuleapTemplate extends BaseTemplate {
 

@@ -9,7 +9,7 @@
 	"descriptionmsg": "tuleapskin-desc",
 	"type": "skin",
 	"requires": {
-		"MediaWiki": ">= 1.35.0",
+		"MediaWiki": ">= 1.40.0",
 		"extensions": {
 			"TuleapIntegration": "*"
 		}
@@ -41,7 +41,7 @@
 	},
 	"ResourceModules": {
 		"skins.tuleap.mw.interface.styles": {
-			"class": "ResourceLoaderSkinModule",
+			"class": "MediaWiki\\ResourceLoader\\SkinModule",
 			"features": {
 				"content-links": true,
 				"content-media": true,

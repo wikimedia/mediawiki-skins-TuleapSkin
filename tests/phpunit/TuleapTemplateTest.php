@@ -2,9 +2,9 @@
 
 namespace TuleapSkin\Test;
 
+use MediaWiki\Html\TemplateParser;
 use MediaWiki\MediaWikiServices;
 use MediaWikiIntegrationTestCase;
-use TemplateParser;
 use TuleapSkin\TuleapTemplate;
 
 class TuleapTemplateTest extends MediaWikiIntegrationTestCase {
