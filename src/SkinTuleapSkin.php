@@ -3,15 +3,15 @@
 namespace TuleapSkin;
 
 use Config;
-use Html;
+use MediaWiki\Html\Html;
+use MediaWiki\Html\TemplateParser;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\Title\Title;
 use MediaWiki\User\UserGroupManager;
 use Message;
 use OutputPage;
 use SkinTemplate;
-use TemplateParser;
-use Title;
 
 /**
  * SkinTemplate class for the Tuleap skin
