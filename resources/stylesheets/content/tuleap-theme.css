@@ -74,10 +74,6 @@ a:visited {
 	color: var( --tlp-danger-dark-color );
 }
 
-#mw-content-text a.external {
-	padding-right: 0;
-}
-
 pre,
 .mw-code,
 code {
