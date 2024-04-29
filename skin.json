@@ -73,7 +73,8 @@
 				"stylesheets/content/ve.css": {},
 				"stylesheets/icons/icons.css": {},
 				"stylesheets/tlp.print.css": { "media": "print" },
-				"stylesheets/content/mainpage.css": {}
+				"stylesheets/content/mainpage.css": {},
+				"stylesheets/content/externallinks.css": {}
 			}
 		},
 		"skins.tuleap-sidebar": {
