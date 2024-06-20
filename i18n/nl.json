@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"Romaine"
 		]
 	},
+	"tuleapskin-desc": "Tuleap-uiterlijk",
 	"tlp-personal-menu-title": "Persoonlijk",
+	"tlp-personal-menu-text": "MediaWiki-account",
 	"tlp-tools-menu-title": "Hulpmiddelen",
 	"tlp-actions-menu-title": "Handelingen",
 	"tlp-administration": "Beheer"
