@@ -2,6 +2,8 @@
 
 namespace TuleapSkin;
 
+use TuleapIntegration\TuleapConnection;
+
 class TuleapSidebar {
 
 	/**
