@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"tuleapskin-desc": "Tuleap Interface",
 	"tlp-personal-menu-title": "Perséinlech",
+	"tlp-personal-menu-text": "MediaWiki-Kont",
 	"tlp-tools-menu-title": "Geschierkëscht",
 	"tlp-actions-menu-title": "Aktiounen",
 	"tlp-administration": "Administratioun"
