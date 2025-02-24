@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"MathXplore"
+			"MathXplore",
+			"Yaakiyu.jp"
 		]
 	},
+	"tuleapskin-desc": "Tuleapスキン",
 	"tlp-personal-menu-title": "個人",
 	"tlp-personal-menu-text": "MediaWiki アカウント",
 	"tlp-tools-menu-title": "ツール",
