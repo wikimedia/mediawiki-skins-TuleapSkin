@@ -8,7 +8,6 @@ module.exports = function ( grunt ) {
 	const conf = grunt.file.readJSON( 'skin.json' );
 
 	grunt.loadNpmTasks( 'grunt-banana-checker' );
-	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-eslint' );
 	grunt.loadNpmTasks( 'grunt-stylelint' );
 
