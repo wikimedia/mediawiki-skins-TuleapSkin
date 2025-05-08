@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Eduardoaddad",
 			"YuriNikolai"
 		]
 	},
 	"tlp-personal-menu-title": "Pessoal",
+	"tlp-personal-menu-text": "Conta do MediaWiki",
 	"tlp-tools-menu-title": "Ferramentas",
 	"tlp-actions-menu-title": "Ações",
 	"tlp-administration": "Administração"
