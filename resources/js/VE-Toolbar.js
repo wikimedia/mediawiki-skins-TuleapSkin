@@ -1,6 +1,6 @@
 ( function ( mw, $ ) {
-	var $visualFloatingVE, $sourceFloatingVE;
-	$( window ).on( 'scroll', function () {
+	let $visualFloatingVE, $sourceFloatingVE;
+	$( window ).on( 'scroll', () => {
 		// eslint-disable-next-line no-jquery/no-global-selector
 		if ( $( '.ve-init-target-visual' ).length || $( '.ve-init-target-source' ).length ) {
 			// eslint-disable-next-line no-jquery/no-global-selector

@@ -1,6 +1,6 @@
 ( function ( mw, $ ) {
-	$( document ).on( 'click', function ( e ) {
-		var $dropdown, $parent,
+	$( document ).on( 'click', ( e ) => {
+		let $dropdown, $parent,
 			// eslint-disable-next-line no-jquery/no-global-selector
 			$dropdownMenu = $( '.mw-tlp-skin-btn-dropdown-menu' ),
 			target = e.target;
