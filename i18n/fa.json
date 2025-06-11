@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Jeeputer"
+			"Jeeputer",
+			"Huji"
 		]
 	},
 	"tuleapskin-desc": "پوسته تولیپ",
@@ -9,6 +10,6 @@
 	"tlp-personal-menu-text": "حساب مدیاویکی",
 	"tlp-main-menu-title": "مدیاویکی",
 	"tlp-tools-menu-title": "ابزارها",
-	"tlp-actions-menu-title": "عمل‌ها",
+	"tlp-actions-menu-title": "کنش‌ها",
 	"tlp-administration": "مدیریت"
 }
