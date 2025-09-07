@@ -9,7 +9,6 @@ use TuleapSkin\SkinTuleapSkin;
 class SkinTuleapSkinTest extends MediaWikiIntegrationTestCase {
 
 	/**
-	 *
 	 * @dataProvider provideOptions
 	 * @covers TuleapSkin\SkinTuleapSkin::__construct
 	 */

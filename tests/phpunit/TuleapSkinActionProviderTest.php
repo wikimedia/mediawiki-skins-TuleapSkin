@@ -8,7 +8,6 @@ use TuleapSkin\TuleapSkinActionProvider;
 class TuleapSkinActionProviderTest extends MediaWikiIntegrationTestCase {
 
 	/**
-	 *
 	 * @return void
 	 * @dataProvider provideGetLinksTestData
 	 * @covers TuleapSkin\TuleapSkinActionProvider::getLinks

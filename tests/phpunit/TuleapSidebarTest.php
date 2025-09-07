@@ -26,7 +26,6 @@ class TuleapSidebarTest extends MediaWikiIntegrationTestCase {
 	];
 
 	/**
-	 *
 	 * @covers TuleapSkin\TuleapSidebar::__construct
 	 */
 	public function testTuleapSidebar() {

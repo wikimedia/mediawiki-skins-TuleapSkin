@@ -7,19 +7,16 @@ use TuleapIntegration\TuleapConnection;
 class TuleapSidebar {
 
 	/**
-	 *
 	 * @var TuleapConnection
 	 */
 	private $connection = null;
 
 	/**
-	 *
 	 * @var int
 	 */
 	private $id = 0;
 
 	/**
-	 *
 	 * @param TuleapConnection $connection
 	 * @param int $id
 	 */
@@ -29,7 +26,6 @@ class TuleapSidebar {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getStyles() {
@@ -44,7 +40,6 @@ class TuleapSidebar {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getConfiguration() {
@@ -59,7 +54,6 @@ class TuleapSidebar {
 	}
 
 	/**
-	 *
 	 * @return bool
 	 */
 	public function isCollapsed() {
@@ -74,7 +68,6 @@ class TuleapSidebar {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getTheme() {

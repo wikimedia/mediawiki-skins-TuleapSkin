@@ -29,7 +29,6 @@ class TuleapTemplate extends BaseTemplate {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	private function getSkinData(): array {

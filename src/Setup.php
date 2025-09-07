@@ -5,7 +5,6 @@ namespace TuleapSkin;
 class Setup {
 
 	/**
-	 *
 	 * @return void
 	 */
 	public static function onCallback() {

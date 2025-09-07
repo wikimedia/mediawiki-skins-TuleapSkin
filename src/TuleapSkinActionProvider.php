@@ -10,7 +10,6 @@ class TuleapSkinActionProvider {
 	private $actions = [];
 
 	/**
-	 *
 	 * @param array $actions
 	 */
 	public function __construct( $actions ) {

@@ -36,7 +36,6 @@ class SkinTuleapSkin extends SkinTemplate {
 	private $tuleapSidebar = null;
 
 	/**
-	 *
 	 * @var array
 	 */
 	private $content_navigation = [];
@@ -60,7 +59,6 @@ class SkinTuleapSkin extends SkinTemplate {
 	private $projectId;
 
 	/**
-	 *
 	 * @var TuleapSkinActionProvider
 	 */
 	private $actionProvider = null;
@@ -97,7 +95,6 @@ class SkinTuleapSkin extends SkinTemplate {
 	}
 
 	/**
-	 *
 	 * @inheritDoc
 	 */
 	protected function setupTemplate( $classname ) {
@@ -132,7 +129,6 @@ class SkinTuleapSkin extends SkinTemplate {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function getTemplateData() {
@@ -238,8 +234,6 @@ class SkinTuleapSkin extends SkinTemplate {
 		return $html;
 	}
 
-	/**
-	 */
 	private function buildActionLinks() {
 		foreach ( $this->content_navigation as $links ) {
 			$this->actions = array_merge( $this->actions, $links );
@@ -258,7 +252,6 @@ class SkinTuleapSkin extends SkinTemplate {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	private function getActionTools() {
@@ -282,7 +275,6 @@ class SkinTuleapSkin extends SkinTemplate {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	private function getPersonalList() {

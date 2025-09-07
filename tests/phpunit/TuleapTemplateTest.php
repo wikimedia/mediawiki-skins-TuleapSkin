@@ -10,7 +10,6 @@ use TuleapSkin\TuleapTemplate;
 class TuleapTemplateTest extends MediaWikiIntegrationTestCase {
 
 	/**
-	 *
 	 * @dataProvider provideDirs
 	 * @covers TuleapSkin\TuleapTemplate::__construct
 	 */
