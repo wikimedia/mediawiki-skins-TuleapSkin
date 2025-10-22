@@ -85,4 +85,12 @@ class TuleapSidebar {
 		}
 		return $theme[ 'variant_name' ];
 	}
+
+	public function shouldUseThemeFavicon(): bool {
+		$styles = $this->connection->getIntegrationData( $this->id, 'styles' );
+		if ( !is_array( $styles ) ) {
+			return false;
+		}
+		return $styles[ 'should_display_favicon_variant' ] ?? false;
+	}
 }
