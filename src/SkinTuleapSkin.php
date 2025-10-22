@@ -128,8 +128,8 @@ class SkinTuleapSkin extends SkinTemplate {
 		$out->addInlineStyle( $styles );
 
 		$scriptPath = $GLOBALS['wgScriptPath'];
-		$userTheme = $this->getTuleapSidebar()->getTheme();
-		$GLOBALS['wgFavicon'] = "$scriptPath/skins/TuleapSkin/resources/images/favicon/$userTheme/favicon.ico";
+		$userTheme  = $this->getFaviconThemeColor();
+		$GLOBALS[ 'wgFavicon' ] = "$scriptPath/skins/TuleapSkin/resources/images/favicon/$userTheme/favicon.svg";
 	}
 
 	/**
@@ -357,4 +357,10 @@ class SkinTuleapSkin extends SkinTemplate {
 		return $extendedSidebar;
 	}
 
+	private function getFaviconThemeColor(): string {
+		if ( !$this->getTuleapSidebar()->shouldUseThemeFavicon() ) {
+			return 'orange';
+		}
+		return $this->getTuleapSidebar()->getTheme();
+	}
 }
