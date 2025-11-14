@@ -6,8 +6,7 @@
 		"installer-name": "TuleapSkin"
 	},
 	"require": {
-		"composer/installers": "~1.0",
-		"mwstake/mediawiki-component-thirdpartyresources": "~1.0"
+		"composer/installers": "^1.0||^2.0"
 	},
 	"require-dev": {
 		"mediawiki/mediawiki-codesniffer": "47.0.0",

@@ -120,7 +120,6 @@ class SkinTuleapSkin extends SkinTemplate {
 
 		// Add only ResourceModules for active layout and used structures
 		$out->addModuleStyles( 'skins.tuleap.styles' );
-		$out->addModules( 'skins.tuleap-sidebar' );
 		$out->addModules( 'skins.tuleap.scripts' );
 
 		// Add styles from user
