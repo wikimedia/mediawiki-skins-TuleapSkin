@@ -1,3 +1,12 @@
+body.mediawiki.skin-tuleap {
+	--color-progressive: var( --tlp-main-color );
+	--background-color-progressive: var( --tlp-main-color );
+	--background-color-progressive-subtle: var( --tlp-main-color-hover-background );
+	--color-progressive--hover: var( --tlp-main-color-darker-05 );
+	--background-color-base: var( --tlp-main-color );
+	--border-color-progressive--hover: var( --tlp-main-color );
+}
+
 /** ooui button progressive */
 body.mediawiki.skin-tuleap .oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button {
 	background-color: var( --tlp-main-color );
@@ -9,7 +18,14 @@ body.mediawiki.skin-tuleap.mw-ui-button.mw-ui-progressive {
 	border-color: var( --tlp-main-color );
 }
 
-body.mediawiki.skin-tuleap .oo-ui-textInputWidget.oo-ui-inputWidget-input:focus {
+body.mediawiki.skin-tuleap .oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button:hover,
+body.mediawiki.skin-tuleap .oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button:focus {
+	background-color: var( --tlp-main-color-darker-05 );
+	border-color: var( --tlp-main-color-darker-05 );
+}
+
+body.mediawiki.skin-tuleap .oo-ui-textInputWidget.oo-ui-inputWidget-input:focus,
+body.mediawiki.skin-tuleap .oo-ui-tool.oo-ui-widget-enabled.oo-ui-flaggedElement-primary.oo-ui-flaggedElement-progressive > .oo-ui-tool-link:focus {
 	border-color: var( --tlp-main-color );
 	box-shadow: inset 0 0 0 1px var( --tlp-main-color );
 	outline-color: var( --tlp-main-color );

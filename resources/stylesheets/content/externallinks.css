@@ -1,5 +1,6 @@
 .mw-parser-output a.external {
 	padding-right: 0;
+	color: var( --tlp-main-color );
 }
 
 /** Fix padding for external links with icons **/

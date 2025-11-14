@@ -45,7 +45,6 @@
 			"features": {
 				"content-links": true,
 				"content-media": true,
-				"interface-message-box": true,
 				"interface-category": true,
 				"content-tables": true,
 				"i18n-ordered-lists": true,
@@ -77,14 +76,9 @@
 				"stylesheets/content/externallinks.css": {}
 			}
 		},
-		"skins.tuleap-sidebar": {
-			"class": "MWStake\\MediaWiki\\Component\\ThirdPartyResources\\ResourceLoader\\DistFiles",
-			"packageFiles": [
-				"lib/project-sidebar.umd.cjs"
-			]
-		},
 		"skins.tuleap.scripts": {
 			"scripts": [
+				"lib/project-sidebar.umd.cjs",
 				"js/Dropdown.js",
 				"js/VE-Toolbar.js"
 			]
