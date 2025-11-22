@@ -3,7 +3,7 @@ body.mediawiki.skin-tuleap {
 	--background-color-progressive: var( --tlp-main-color );
 	--background-color-progressive-subtle: var( --tlp-main-color-hover-background );
 	--color-progressive--hover: var( --tlp-main-color-darker-05 );
-	--background-color-base: var( --tlp-main-color );
+	--background-color-base: var( --tlp-white-color );
 	--border-color-progressive--hover: var( --tlp-main-color );
 }
 
