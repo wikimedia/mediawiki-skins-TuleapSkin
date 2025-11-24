@@ -18,6 +18,11 @@ body.mediawiki.skin-tuleap.mw-ui-button.mw-ui-progressive {
 	border-color: var( --tlp-main-color );
 }
 
+body.mediawiki.skin-tuleap .oo-ui-tool.oo-ui-flaggedElement-progressive > .oo-ui-tool-link {
+	color: #fff;
+	background-color: var( --tlp-main-color );
+}
+
 body.mediawiki.skin-tuleap .oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button:hover,
 body.mediawiki.skin-tuleap .oo-ui-flaggedElement-progressive > .oo-ui-buttonElement-button:focus {
 	background-color: var( --tlp-main-color-darker-05 );
@@ -38,11 +43,6 @@ body.mediawiki.skin-tuleap .oo-ui-checkboxInputWidget.oo-ui-widget-enabled [ typ
 
 body.mediawiki.skin-tuleap .oo-ui-flaggedElement-progressive a.oo-ui-buttonElement-button .oo-ui-labelElement-label {
 	color: var( --tlp-white-color );
-}
-
-body.mediawiki.skin-tuleap .oo-ui-tool.oo-ui-flaggedElement-progressive > .oo-ui-tool-link {
-	color: #fff;
-	background-color: var( --tlp-main-color );
 }
 
 /* stylelint-disable selector-pseudo-element-colon-notation */
