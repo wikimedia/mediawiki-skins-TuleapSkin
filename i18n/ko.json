@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Tensama0415",
 			"YeBoy371",
 			"Ykhwong"
 		]
@@ -10,6 +11,6 @@
 	"tlp-personal-menu-text": "미디어위키 계정",
 	"tlp-main-menu-title": "미디어위키",
 	"tlp-tools-menu-title": "도구",
-	"tlp-actions-menu-title": "동작",
+	"tlp-actions-menu-title": "작업",
 	"tlp-administration": "관리"
 }
