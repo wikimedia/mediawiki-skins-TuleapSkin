@@ -1,8 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
+			"HakanIST",
 			"Hedda"
 		]
 	},
-	"tuleapskin-desc": "Tuleap Teması"
+	"tuleapskin-desc": "Tuleap Teması",
+	"tlp-personal-menu-title": "Kişisel",
+	"tlp-personal-menu-text": "MediaWiki hesabı",
+	"tlp-main-menu-title": "MediaWiki",
+	"tlp-tools-menu-title": "Araçlar",
+	"tlp-actions-menu-title": "İşlemler",
+	"tlp-administration": "Yönetim"
 }
