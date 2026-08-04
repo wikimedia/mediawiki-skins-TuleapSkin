@@ -6,8 +6,8 @@
 		"postinstall": "cp node_modules/@tuleap/project-sidebar/dist/project-sidebar.umd.cjs resources/lib/ && cp node_modules/@tuleap/project-sidebar/dist/style.css resources/lib/project-sidebar.css"
 	},
 	"devDependencies": {
-		"eslint-config-wikimedia": "0.32.4",
-		"grunt": "1.6.1",
+		"eslint-config-wikimedia": "0.32.5",
+		"grunt": "1.6.3",
 		"grunt-banana-checker": "0.13.0",
 		"grunt-eslint": "24.3.0",
 		"grunt-stylelint": "0.21.0",
